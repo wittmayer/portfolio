@@ -1,0 +1,83 @@
+.container {
+    display: grid;
+    grid-template-columns: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
+}
+
+header {
+  background: url(../images/hero-image.png) center / cover;
+  height: 60vh;
+}
+
+h2 {
+  font-family: 'Muli', sans-serif;
+  font-size: 75px;
+  color: #00120B;
+}
+
+h3 {
+  font-family: 'Taviraj', serif;
+  font-size: 50px;
+  color: #00120B;
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 30px;
+  color: #00120B;
+}
+
+.hero {
+  /* Sizing */
+  width:100vw;
+  height:100vh;
+}
+
+.hero .topnav {
+  text-align: right;
+  font-family: 'Muli', sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.topnav a:link {
+  color: #00120B;
+  text-decoration: none;
+}
+
+.btn-black a:link{
+  color: #00120B;
+  text-decoration: none;
+}
+
+.btn-white a:link{
+  color: #F5F0F6;
+  text-decoration: none;
+}
+
+.btn-black {
+  border:3px solid #00120B;
+  color:#00120B;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+}
+
+.btn-white {
+  border:3px solid #F5F0F6;
+  color: #F5F0F6;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+}
+
+.about-me {
+  background-color: #F5F0F6;
+}
