@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="296px" height="297px" viewBox="0 0 296 297" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>sticky2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="-2.84217094e-14" y="1.70530257e-13" width="288.351645" height="288.351645"></rect>
+        <filter x="-2.4%" y="-1.7%" width="104.9%" height="104.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Portfolio-Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D.Case-Study" transform="translate(-525.000000, -4486.000000)">
+            <g id="sticky2" transform="translate(528.662247, 4488.479013)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FAD492" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="us-2" transform="translate(39.837753, 43.675822)" fill="#00120B" font-family="Muli-Regular, Muli" font-size="40" font-weight="normal">
+                    <text id="Put-my-saved-content">
+                        <tspan x="0" y="40.4602034">Put my </tspan>
+                        <tspan x="0" y="90.4602034">saved </tspan>
+                        <tspan x="0" y="140.460203">content into </tspan>
+                        <tspan x="0" y="190.460203">categories.</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

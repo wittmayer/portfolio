@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="537px" height="246px" viewBox="0 0 537 246" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>pref-test</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.60723882,0 L174.966493,0 C179.167855,-7.25959665e-16 182.573732,3.20368064 182.573732,7.15562099 L182.573732,57.2449679 C182.573732,61.1969083 179.167855,64.4005889 174.966493,64.4005889 L7.60723882,64.4005889 C3.40587683,64.4005889 5.1451845e-16,61.1969083 0,57.2449679 L0,7.15562099 C-5.1451845e-16,3.20368064 3.40587683,7.25959665e-16 7.60723882,0 Z" id="path-1"></path>
+        <path d="M7.60723882,0 L174.966493,0 C179.167855,-7.25959665e-16 182.573732,3.20368064 182.573732,7.15562099 L182.573732,57.2449679 C182.573732,61.1969083 179.167855,64.4005889 174.966493,64.4005889 L7.60723882,64.4005889 C3.40587683,64.4005889 5.1451845e-16,61.1969083 0,57.2449679 L0,7.15562099 C-5.1451845e-16,3.20368064 3.40587683,7.25959665e-16 7.60723882,0 Z" id="path-3"></path>
+    </defs>
+    <g id="Portfolio-Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D.Case-Study" transform="translate(-853.000000, -7536.000000)">
+            <g id="pref-test" transform="translate(853.000000, 7535.796355)">
+                <rect id="Rectangle" fill="#F5F0F6" x="0.666396104" y="0.480564715" width="531.333604" height="245.18"></rect>
+                <polygon id="Triangle" fill="#0B3954" points="537 1.58456811 537 245.660565 -5.68434189e-14 245.660565"></polygon>
+                <g id="Enabled" transform="translate(319.061688, 143.960281)">
+                    <g id="Surface">
+                        <g id="path-1-link" fill="#000000">
+                            <path d="M7.60723882,0 L174.966493,0 C179.167855,-7.25959665e-16 182.573732,3.20368064 182.573732,7.15562099 L182.573732,57.2449679 C182.573732,61.1969083 179.167855,64.4005889 174.966493,64.4005889 L7.60723882,64.4005889 C3.40587683,64.4005889 5.1451845e-16,61.1969083 0,57.2449679 L0,7.15562099 C-5.1451845e-16,3.20368064 3.40587683,7.25959665e-16 7.60723882,0 Z" id="path-1"></path>
+                        </g>
+                        <g id="path-1-link" fill="#FAFAFA">
+                            <path d="M7.60723882,0 L174.966493,0 C179.167855,-7.25959665e-16 182.573732,3.20368064 182.573732,7.15562099 L182.573732,57.2449679 C182.573732,61.1969083 179.167855,64.4005889 174.966493,64.4005889 L7.60723882,64.4005889 C3.40587683,64.4005889 5.1451845e-16,61.1969083 0,57.2449679 L0,7.15562099 C-5.1451845e-16,3.20368064 3.40587683,7.25959665e-16 7.60723882,0 Z" id="path-1"></path>
+                        </g>
+                    </g>
+                    <g id="✱-/-Color-/-Primary-/-Main-Clipped">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="path-1"></g>
+                        <g id="✱-/-Color-/-Primary-/-Main" mask="url(#mask-2)" fill="#33DBB9">
+                            <g id="✱-/-Color-/-Primary-/-200">
+                                <rect id="Rectangle-13" x="0" y="0" width="182.573732" height="64.4005889"></rect>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="✱-/-Text-/-Button-/-Selected-/-On-Primary-/-High-Emphasis-/-Center-Clipped">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="path-1"></g>
+                        <g id="✱-/-Text-/-Button-/-Selected-/-On-Primary-/-High-Emphasis-/-Center" mask="url(#mask-4)" font-family="Ubuntu-Regular, Ubuntu" font-size="35" font-weight="normal">
+                            <g transform="translate(1.989127, 3.511379)" id="Button-Text">
+                                <g>
+                                    <g id="Group" fill="#000000">
+                                        <text id="SAVE">
+                                            <tspan x="49.2822034" y="33">SAVE</tspan>
+                                        </text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group-2" transform="translate(30.203734, 28.670281)">
+                    <circle id="Oval" fill="#33DBB9" transform="translate(62.263133, 61.342200) rotate(-45.000000) translate(-62.263133, -61.342200) " cx="62.2631331" cy="61.3422" r="43.3202321"></circle>
+                    <path d="M40.3298214,60.5222 L84.1964448,60.5222" id="Path" stroke="#FFFFFF" stroke-width="6"></path>
+                    <path d="M61.3913799,39.9238 L61.3913799,82.7606" id="Path" stroke="#FFFFFF" stroke-width="6"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

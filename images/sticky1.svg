@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="361px" height="360px" viewBox="0 0 361 360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>sticky1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="33" y="33" width="288.351645" height="288.351645"></rect>
+        <filter x="-2.4%" y="-1.7%" width="104.9%" height="104.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Portfolio-Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D.Case-Study" transform="translate(-132.000000, -4471.000000)">
+            <g id="sticky1" transform="translate(134.898328, 4471.604900)">
+                <g id="Rectangle" transform="translate(177.175822, 177.175822) rotate(-15.000000) translate(-177.175822, -177.175822) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FAD492" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <text id="Save-yoga-articles-t" transform="translate(189.877676, 165.576659) rotate(-16.000000) translate(-189.877676, -165.576659) " font-family="Muli-Regular, Muli" font-size="40" font-weight="normal" fill="#00120B">
+                    <tspan x="76.3776761" y="130.576659">Save yoga </tspan>
+                    <tspan x="76.3776761" y="180.576659">articles to </tspan>
+                    <tspan x="76.3776761" y="230.576659">my profile.</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

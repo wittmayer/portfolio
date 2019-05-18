@@ -3,8 +3,13 @@
     grid-template-columns: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
 }
 
-header {
+header.hero {
   background: url(../images/hero-image.png) center / cover;
+  height: 60vh;
+}
+
+header.featured-project {
+  background-color: #0B3954;
   height: 60vh;
 }
 
@@ -24,6 +29,7 @@ p {
   font-family: 'Nunito', sans-serif;
   font-size: 30px;
   color: #00120B;
+  line-height: normal;
 }
 
 .hero {
@@ -41,6 +47,11 @@ p {
 
 .topnav a:link {
   color: #00120B;
+  text-decoration: none;
+}
+
+.featured-project.topnav a:link {
+  color: #F5F0F6;
   text-decoration: none;
 }
 

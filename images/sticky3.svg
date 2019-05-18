@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="403px" height="403px" viewBox="0 0 403 403" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>sticky3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="54.5525134 54.188021 342.904158 54.188021 342.904158 342.539666 54.5525134 342.539666"></polygon>
+        <filter x="-2.4%" y="-1.7%" width="104.9%" height="104.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Portfolio-Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D.Case-Study" transform="translate(-875.000000, -4424.000000)">
+            <g id="sticky3" transform="translate(878.666486, 4425.302092)">
+                <g id="Rectangle" transform="translate(198.728336, 198.363843) rotate(31.000000) translate(-198.728336, -198.363843) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FAD492" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <text id="Create-my-own-yoga-s" transform="translate(193.900273, 195.462850) rotate(31.000000) translate(-193.900273, -195.462850) " font-family="Muli-Regular, Muli" font-size="40" font-weight="normal" fill="#00120B">
+                    <tspan x="86.4002728" y="160.46285">Create my </tspan>
+                    <tspan x="86.4002728" y="210.46285">own yoga </tspan>
+                    <tspan x="86.4002728" y="260.46285">sequences.</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
