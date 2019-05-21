@@ -1,11 +1,11 @@
-.container {
+/*.container {
     display: grid;
-    grid-template-columns: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
-}
+    grid-template-columns: 200px 200px 200px 200px;
+}*/
 
 header.hero {
   background: url(../images/hero-image.png) center / cover;
-  height: 60vh;
+  height: 100vh;
 }
 
 header.featured-project {
@@ -16,19 +16,16 @@ header.featured-project {
 h2 {
   font-family: 'Muli', sans-serif;
   font-size: 75px;
-  color: #00120B;
 }
 
 h3 {
   font-family: 'Taviraj', serif;
   font-size: 50px;
-  color: #00120B;
 }
 
 p {
   font-family: 'Nunito', sans-serif;
   font-size: 30px;
-  color: #00120B;
   line-height: normal;
 }
 
@@ -39,20 +36,26 @@ p {
 }
 
 .hero .topnav {
-  text-align: right;
+  color: #00120B;
   font-family: 'Muli', sans-serif;
-  font-size: 30px;
-  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 50px;
+  text-align: right;
 }
 
 .topnav a:link {
-  color: #00120B;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
 .featured-project.topnav a:link {
   color: #F5F0F6;
   text-decoration: none;
+}
+
+.blue-background {
+  background-color: #0B3954;
+  color: #F5F0F6;
 }
 
 .btn-black a:link{
@@ -91,4 +94,26 @@ p {
 
 .about-me {
   background-color: #F5F0F6;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.white-background {
+  background-color: #F5F0F6;
+  color: #00120B;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  display: inline;
+  padding: 8px;
+  width: 60px;
 }
