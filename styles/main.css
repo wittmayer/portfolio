@@ -2,72 +2,154 @@
     display: grid;
     grid-template-columns: 200px 200px 200px 200px;
 }*/
-
-header.hero {
-  background: url(../images/hero-image.png) center / cover;
-  height: 100vh;
-}
-
-header.featured-project {
-  background-color: #0B3954;
-  height: 60vh;
-}
-
+/* Fonts and Text Styling */
 h2 {
   font-family: 'Muli', sans-serif;
-  font-size: 75px;
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1;
 }
 
 h3 {
   font-family: 'Taviraj', serif;
-  font-size: 50px;
+  font-size: 3em;
+  letter-spacing: .5px;
+  line-height: 1;
 }
 
 p {
   font-family: 'Nunito', sans-serif;
-  font-size: 30px;
+  font-size: 1.5em;
   line-height: normal;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  display: inline;
+  padding-right: 10px;
+  width: 60px;
+}
+
+.contact-footer {
+  text-align: center;
+  padding: 100px 0px;
+}
+
+.contact-icons {
+  font-size: 3em;
+  padding: 50px 0px;
+}
+
+.bottomnav {
+  background-color: #0B3954;
+  font-family: 'Muli', sans-serif;
+  font-size: 1.5em;
+  padding: 50px 0px;
+  text-align: center;
+  word-spacing: 50px;
+}
+
+.topnav a, .bottomnav a {
+  color: #FFFFFF;
+  font-family: 'Muli', sans-serif;
+  font-size: 1em;
+}
+
+/* Homepage Hero*/
 .hero {
-  /* Sizing */
   width:100vw;
   height:100vh;
 }
 
-.hero .topnav {
+header.hero {
+  background: url(../images/hero-image.png) center / cover;
+}
+
+nav {
   color: #00120B;
   font-family: 'Muli', sans-serif;
   font-size: 1.5rem;
   padding: 50px;
+  word-spacing: 20px;
+}
+
+/* Grid Setup */
+.topnav {
+  display: grid;
   text-align: right;
+  grid-template-areas:
+    "logo logo logo logo logo about work contact"
 }
 
-.topnav a:link {
-  color: #FFFFFF;
-  text-decoration: none;
+.logo {
+  grid-area: logo;
+  margin: -13px;
+  min-height: 75px;
+  text-align: left;
 }
 
-.featured-project.topnav a:link {
-  color: #F5F0F6;
-  text-decoration: none;
+.about {
+  grid-area: about;
+  justify-content: center;
 }
 
+.work {
+  grid-area: work;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+/* Card Styling */
 .blue-background {
   background-color: #0B3954;
-  color: #F5F0F6;
+  color: #FFFFFF;
 }
 
-.btn-black a:link{
+.gray-background {
+  background-color: #E8E8E8;
   color: #00120B;
-  text-decoration: none;
 }
 
-.btn-white a:link{
-  color: #F5F0F6;
-  text-decoration: none;
+.white-background {
+  display: grid;
+  background-color: #FFFFFF;
+  color: #00120B;
 }
 
+/* Featured Work Section */
+.featured-work {
+  background-color: #0B3954;
+  color: #FFFFFF;
+  display: grid;
+  grid-template-areas:
+    "featured-text featured-image"
+}
+
+.featured-text {
+  grid-area: featured-text;
+  margin-left: 120px;
+  padding: 144px 0px;
+}
+
+.featured-image {
+  grid-area: featured-image;
+  align-self: center;
+  padding: 144px 120px 144px 0px;
+}
+
+/* Button Styling */
 .btn-black {
   border:3px solid #00120B;
   color:#00120B;
@@ -81,8 +163,8 @@ p {
 }
 
 .btn-white {
-  border:3px solid #F5F0F6;
-  color: #F5F0F6;
+  border:3px solid #FFFFFF;
+  color: #FFFFFF;
   padding: 15px 20px;
   text-align: center;
   text-decoration: none;
@@ -92,28 +174,73 @@ p {
   text-transform: uppercase;
 }
 
-.about-me {
-  background-color: #F5F0F6;
+/* Image Styling */
+.right {
+  float:right;
+  width: 345px;
+  overflow: auto;
 }
 
-.logo {
-  grid-area: logo;
+.left {
+  float: left;
+  width: 345px;
 }
 
-.white-background {
-  background-color: #F5F0F6;
-  color: #00120B;
+.right-large {
+  float: right;
+  width: 500px;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
-li {
-  display: inline;
-  padding: 8px;
-  width: 60px;
+
+div.large-margin {
+  margin: 0px 240px;
+  padding: 144px 0px;
+}
+
+div.small-margin {
+  margin: 0px 120px;
+  padding: 144px 0px;
+}
+
+p.feat {
+  width: 425px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 650px) {
+  .topnav {
+    justify-content: center;
+    text-align: center;
+    grid-template-areas:
+      "logo"
+      "about"
+      "work"
+      "contact"
+  }
+}
+
+@media (max-width: 1070px) {
+  .featured-work {
+    grid-template-areas:
+    "featured-text"
+    "featured-image"
+  }
+  .featured-image {
+    padding: 0px 120px 144px 120px;
+  }
+  .hero {
+    height:auto;
+    max-width: 100%;
+  }
 }
