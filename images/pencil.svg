@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="131px" height="132px" viewBox="0 0 131 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>pencil</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop-Pattern-Library" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D.Case-Study" transform="translate(-296.000000, -1745.000000)">
+            <g id="Competitive-Analysis" transform="translate(-3.000000, 1242.258319)">
+                <g id="pencil" transform="translate(302.500000, 506.046938)">
+                    <path d="M70.8627701,34.3882718 L62.2121691,43.1844505 L63.9725859,45.3705548 L36.8250884,72.0062448 L31.8909684,91.4766196 L51.3768693,88.015976 L78.30079,60.638963 L79.6316445,61.992214 L88.8006041,52.8096965 L87.161715,51.0024841 C92.2894248,45.4190794 92.8357212,40.3620636 88.8006041,35.8314367 C84.765487,31.3008097 79.7858003,31.0073742 73.8615438,34.9511301 L72.8511404,36.3149762 L70.8627701,34.3882718 Z" id="Path-4" stroke="#0B3954" stroke-width="6"></path>
+                    <path d="M72.6382353,36.0578278 L86.9118155,50.5716125" id="Line-3" stroke="#0B3954" stroke-width="6" fill="#D8D8D8" stroke-linecap="square"></path>
+                    <path d="M64.7770713,46.1469334 L79.0506515,60.6607181" id="Line-3" stroke="#0B3954" stroke-width="6" fill="#D8D8D8" stroke-linecap="square"></path>
+                    <path d="M37.7379259,72.754258 L52.011506,87.2680427" id="Line-3" stroke="#0B3954" stroke-width="6" fill="#D8D8D8" stroke-linecap="square"></path>
+                    <polygon id="Triangle" fill="#0B3954" transform="translate(33.754685, 89.813195) rotate(-134.000000) translate(-33.754685, -89.813195) " points="33.7135862 87.3394032 36.2196368 92.2869862 31.2897327 92.2458876"></polygon>
+                    <ellipse id="Oval" stroke="#0B3954" stroke-width="6" cx="61.7582725" cy="62.7975787" rx="61.7582725" ry="62.7975787"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
