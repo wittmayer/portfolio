@@ -114,12 +114,15 @@ li {
 
 /* Homepage Hero*/
 .hero {
-  width: 100vw;
   height: 100%;
 }
 
 header.hero {
   background: url(../images/hero-image.png) center / cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 nav {
@@ -128,6 +131,10 @@ nav {
   font-size: 1.5rem;
   padding: 50px;
   word-spacing: 20px;
+}
+
+.welcome-text {
+  margin: 0px 50px 50px 0px;
 }
 
 /* About and Featured Sections */
