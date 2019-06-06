@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="310px" height="319px" viewBox="0 0 310 319" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>sticky1@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-5.6%" y="-4.9%" width="111.6%" height="111.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <polygon id="path-2" points="30.5158806 29.879558 274.179301 28.0004991 272.300242 278.173171 28.6368217 280.05223"></polygon>
+        <filter x="-2.9%" y="-2.0%" width="105.7%" height="105.6%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Portfolio-Mockups---2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D.Case-Study" transform="translate(-235.000000, -3563.000000)">
+            <g id="User-Stories" transform="translate(238.000000, 3524.000000)">
+                <g id="sticky1" filter="url(#filter-1)" transform="translate(0.000000, 40.252971)">
+                    <g id="Rectangle" transform="translate(151.408061, 154.026364) rotate(-15.000000) translate(-151.408061, -154.026364) ">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    </g>
+                    <text id="Save-yoga-articles-t" transform="translate(151.408061, 154.026364) rotate(-16.000000) translate(-151.408061, -154.026364) " font-family="Muli-Regular, Muli" font-size="30" font-weight="normal" fill="#00120B">
+                        <tspan x="55.6962722" y="127.026364">Save yoga </tspan>
+                        <tspan x="55.6962722" y="165.026364">articles to my </tspan>
+                        <tspan x="55.6962722" y="203.026364">profile.</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,94 +1,658 @@
-.container {
-    display: grid;
-    grid-template-columns: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
-}
-
-header.hero {
-  background: url(../images/hero-image.png) center / cover;
-  height: 60vh;
-}
-
-header.featured-project {
-  background-color: #0B3954;
-  height: 60vh;
+/* Fonts and Text Styling */
+h1 {
+  font-family: 'Muli', sans-serif;
+  font-size: 8em;
+  font-weight: bold;
+  line-height: 1;
 }
 
 h2 {
   font-family: 'Muli', sans-serif;
-  font-size: 75px;
-  color: #00120B;
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1;
 }
 
 h3 {
-  font-family: 'Taviraj', serif;
-  font-size: 50px;
-  color: #00120B;
+  font-family: 'Muli', sans-serif;
+  font-size: 3em;
+  line-height: 1;
 }
+
+h4 {
+  font-family: 'MuliBlack', sans-serif;
+  font-size: 3em;
+  font-weight: bolder;
+  line-height: 1;
+}
+
+h5 {
+  font-family: 'Muli', sans-serif;
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+h6 {
+  font-family: 'Muli', sans-serif;
+  font-size: 1.5em;
+  line-height: normal;
+  text-decoration: underline;
+}
+
+ #bold a {
+   color: #FFFFFF;
+   font-family: 'MuliBlack', sans-serif;
+   font-size: 1em;
+   font-weight: bolder;
+   line-height: 1;
+   text-decoration: none;
+ }
+
+ #bold {
+   font-family: 'Muli', sans-serif;
+   font-size: 3em;
+   line-height: 1;
+ }
+
+ .welcome-text h5 {
+   margin-left: 7px;
+   margin-bottom: -10px;
+ }
 
 p {
-  font-family: 'Nunito', sans-serif;
-  font-size: 30px;
-  color: #00120B;
-  line-height: normal;
-}
-
-.hero {
-  /* Sizing */
-  width:100vw;
-  height:100vh;
-}
-
-.hero .topnav {
-  text-align: right;
   font-family: 'Muli', sans-serif;
-  font-size: 30px;
-  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 32px;
+  margin: 32px 0px;
 }
 
-.topnav a:link {
+a {
   color: #00120B;
+  font-family: 'Muli', sans-serif;
+  font-size: 1.5em;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  display: inline;
+  padding-right: 10px;
+  width: 60px;
+}
+
+.bottomnav {
+  background-color: #0B3954;
+  font-family: 'Muli', sans-serif;
+  font-size: 1.5em;
+  padding: 50px 0px;
+  text-align: center;
+  text-decoration: none;
+  word-spacing: 50px;
+}
+
+.topnav a, .bottomnav a {
+  color: #FFFFFF;
+  font-family: 'Muli', sans-serif;
+  font-size: 1em;
   text-decoration: none;
 }
 
-.featured-project.topnav a:link {
-  color: #F5F0F6;
+.contact-icons a {
   text-decoration: none;
+  color: #5E9E9F;
 }
 
-.btn-black a:link{
+.welcome-text h1 {
+  font-size: 10vw;
+}
+
+.welcome-text span {
+  font-size: 5vw;
+}
+
+/* Homepage Hero*/
+.hero {
+  max-width: 100%;
+  background: url(../images/hero-image.png) center / cover;
+}
+
+.welcome {
+  /* Grid Styles */
+  display: grid;
+  align-items: left;
+  grid-template-columns: repeat(auto-fit, minmax(4, 1fr));
+}
+
+nav {
   color: #00120B;
-  text-decoration: none;
+  font-family: 'Muli', sans-serif;
+  font-size: 1.5rem;
+  padding: 50px;
+  word-spacing: 20px;
 }
 
-.btn-white a:link{
-  color: #F5F0F6;
-  text-decoration: none;
+.welcome-text {
+  margin: 0px 50px 50px 0px;
 }
 
+/* About and Featured Sections */
+.about-teaser {
+  margin: 8vw 12vw 5vw 12vw;
+}
+
+.featured-work {
+  background-color: #0B3954;
+  color: #FFFFFF;
+}
+
+.featured-text {
+  margin: 0px 50vw 0px 6vw;
+  padding: 50px 0px;
+}
+
+.featured-image {
+  position: absolute;
+  top: 845px;
+  right: 60px;
+}
+
+/* Contact Section */
+.contact-footer {
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.contact-icons {
+  font-size: 3em;
+  padding: 25px 0px;
+}
+
+/* Card Styling */
+.blue-background {
+  background-color: #0B3954;
+  color: #FFFFFF;
+}
+
+/* Button Styling */
 .btn-black {
   border:3px solid #00120B;
   color:#00120B;
-  padding: 15px 20px;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 20px;
   font-family: 'Nunito', sans-serif;
+  margin: 30px 0px;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
 .btn-white {
-  border:3px solid #F5F0F6;
-  color: #F5F0F6;
-  padding: 15px 20px;
-  text-align: center;
-  text-decoration: none;
+  border:3px solid #FFFFFF;
+  color: #FFFFFF;
   display: inline-block;
   font-size: 20px;
   font-family: 'Nunito', sans-serif;
+  margin: 30px 0px;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
-.about-me {
-  background-color: #F5F0F6;
+/* Image Styling */
+.right {
+  float:right;
+  width: 345px;
+  overflow: auto;
+}
+
+.left {
+  float: left;
+  width: 345px;
+}
+
+.right-large {
+  float: right;
+  width: 500px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.featured-image img {
+  max-width: 90%;
+}
+
+.phone img {
+  max-width: 70%;
+}
+
+.three-col-1 img {
+  padding: 20px;
+}
+
+.wire-images img {
+  align-items: center;
+  max-width: 70%;
+  margin: 30px 0px;
+}
+
+.testing-sequences img {
+  align-items: center;
+  margin: 0px 20px;
+  text-align: center;
+}
+
+#logo-sketch {
+  margin: 30px 0px;
+  max-width: 70%;
+}
+
+div.small-margin {
+  margin: 0px 120px;
+  padding: 144px 0px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Grid Setup */
+.topnav {
+  display: grid;
+  grid-area: topnav;
+  grid-template-areas:
+    "logo about work contact";
+  grid-template-columns: 65% repeat(3, 1fr);
+}
+
+.top {
+  display: grid;
+  grid-template-areas:
+    "summary phone";
+  grid-template-columns: 60% 40%;
+}
+
+.welcome {
+  color: #FFFFFF;
+  display: grid;
+  grid-area: welcome;
+  grid-template-areas:
+    "empty-space welcome-text";
+  grid-template-columns: 40% 60%;
+  margin: 50px;
+}
+
+.welcome-text {
+  display: grid;
+}
+
+.two-col-1 {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-areas:
+    "overview overview"
+    "deliverables tools"
+    "competitive-analysis competitive-analysis";
+  margin: 8vw 12vw;
+}
+
+.three-col-1 {
+  display: grid;
+  grid-gap: 50px 0px;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-areas:
+    "pencil cloud versatility"
+    "link link link";
+  margin: 0px 12vw;
+}
+
+.two-col-2 {
+  display:grid;
+  grid-gap: 50px;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "user-research user-research"
+    "user-personas user-personas";
+  margin: 8vw 12vw;
+}
+
+.three-col-2 {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-areas:
+    "persona1 persona2 persona3"
+    "link link link";
+  margin: 0px 12vw;
+}
+
+.two-col-3 {
+  display: grid;
+  grid-gap:50px;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "user-stories user-stories";
+  margin: 8vw 12vw;
+}
+
+.three-col-3 {
+  display: grid;
+  grid-gap: 50px 0px;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-areas:
+    "sticky1 sticky2 sticky3"
+    "link link link";
+  margin: 0px 12vw;
+}
+
+.two-col-4 {
+  display: grid;
+  grid-gap: 50px 60px;
+  grid-template-areas:
+    "user-flow user-flow"
+    "wire-images wireframes"
+    "brand-text brand-image"
+    "mockup-image mockup"
+    "testing testing";
+  margin: 8vw 12vw;
+}
+
+.three-col-4 {
+  display: grid;
+  /* grid-gap: 50px 0px; */
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-areas:
+    "test-changes test-changes test-changes";
+  justify-content: center;
+  margin: 0px 12vw;
+}
+
+.two-col-5 {
+  display: grid;
+  grid-gap: 50px 60px;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "testing-two testing-two"
+    "conclusion conclusion";
+  margin: 8vw 12vw;
+}
+
+.logo {
+  grid-area: logo;
+  margin: -13px;
+  min-height: 75px;
+  text-align: left;
+}
+
+.link {
+  grid-area: link;
+}
+
+.about {
+  grid-area: about;
+  justify-content: center;
+}
+
+.work {
+  grid-area: work;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.top {
+  background-color: #0B3954;
+  align-items: center;
+}
+
+.summary {
+  color: #FFFFFF;
+  grid-area: summary;
+  padding-left: 120px;
+}
+
+.phone {
+  grid-area: phone;
+  align-self: flex-end;
+  padding-left: 50px;
+}
+
+.overview {
+  grid-area: overview;
+}
+
+.deliverables {
+  grid-area: deliverables;
+}
+
+.tools {
+  grid-area: tools;
+}
+
+.competitive-analysis {
+  grid-area: competitive-analysis;
+}
+
+.pencil {
+  align-self: auto;
+  grid-area: pencil;
+  text-align: center;
+}
+
+.cloud {
+  align-self: auto;
+  grid-area: cloud;
+  text-align: center;
+}
+
+.versatility {
+  align-self: auto;
+  grid-area: versatility;
+  text-align: center;
+}
+
+.user-research {
+  grid-area: user-research;
+}
+
+.user-personas {
+  grid-area: user-personas;
+}
+
+.persona1 {
+  align-self: auto;
+  grid-area: persona1;
+  text-align: center;
+}
+
+.persona2 {
+  align-self: auto;
+  grid-area: persona2;
+  text-align: center;
+}
+
+.persona3 {
+  align-self: auto;
+  grid-area: persona3;
+  text-align: center;
+}
+
+.user-stories {
+  grid-area: user-stories;
+}
+
+.sticky1 {
+  grid-area: sticky1;
+  justify-self: center;
+}
+
+.sticky2 {
+  grid-area: sticky2;
+  justify-self: center;
+}
+
+.sticky3 {
+  grid-area: sticky3;
+  justify-self: center;
+}
+.user-flow {
+  grid-area: user-flow;
+}
+
+.wireframes {
+  grid-area: wireframes;
+}
+
+.wire-images {
+  text-align: center;
+  grid-area: wire-images;
+}
+
+.brand-text {
+  grid-area: brand-text;
+}
+
+.brand-image {
+  grid-area: brand-image;
+  text-align: center;
+}
+
+.mockup-image {
+  grid-area: mockup-image;
+  text-align: center;
+}
+
+.mockup {
+  grid-area: mockup;
+}
+
+.testing {
+  grid-area: testing;
+}
+
+.test-changes {
+  grid-area: test-changes;
+  text-align: center;
+}
+
+.testing-two {
+  grid-area: testing-two;
+}
+
+.testing-sequences {
+  text-align: center;
+}
+
+.conclusion {
+  grid-area: conclusion;
+}
+
+/*Responsive Design */
+@media (max-width: 650px) {
+  .topnav {
+    justify-content: center;
+    text-align: center;
+    grid-template-areas:
+      "logo"
+      "about"
+      "work"
+      "contact"
+  }
+}
+
+@media (max-width: 1155px) {
+  .featured-work {
+    grid-template-areas:
+    "featured-text"
+    "featured-image"
+  }
+
+  .featured-image {
+    display: none;
+  }
+
+  .featured-text {
+    margin: 0px 120px 0px 120px;
+  }
+
+  .hero {
+    height: auto;
+    max-width: 100%;
+  }
+}
+/*
+@media (max-width: 700px) {
+
+  }*/
+
+@media screen and (min-width: 700px) {
+  .two-col-1 {
+    grid-template-areas:
+    "overview overview"
+    "deliverables deliverables"
+    "tools tools"
+    "competitive-analysis competitive-analysis";
+  }
+
+  .three-col-1 {
+    grid-template-areas:
+    "pencil pencil pencil"
+    "cloud cloud cloud"
+    "versatility versatility versatility"
+    "link link link";
+  }
+
+  .two-col-2 {
+    grid-template-areas:
+      "user-research user-research"
+      "user-personas user-personas";
+  }
+
+  .three-col-2 {
+    grid-template-areas:
+      "persona1 persona1 persona1"
+      "persona2 persona2 persona2"
+      "persona3 persona3 persona3"
+      "link link link";
+  }
+
+  .two-col-3 {
+    grid-template-areas:
+      "user-stories user-stories user-stories";
+  }
+
+  .three-col-3 {
+    align-items: center;
+    grid-template-areas:
+      "sticky1 sticky1 sticky1"
+      "sticky2 sticky2 sticky2"
+      "sticky3 sticky3 sticky3"
+      "link link link";
+
+}
+
+  .two-col-4 {
+    display: grid;
+    grid-template-areas:
+      "user-flow user-flow"
+      "wire-images wire-images"
+      "wireframes wireframes"
+      "brand-text brand-text"
+      "brand-image brand-image"
+      "mockup-image mockup-image"
+      "mockup mockup"
+      "testing testing"
+  }
 }
