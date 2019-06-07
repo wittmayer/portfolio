@@ -1,7 +1,3 @@
-/*.container {
-    display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
-}*/
 /* Fonts and Text Styling */
 h1 {
   font-family: 'Muli', sans-serif;
@@ -153,17 +149,21 @@ nav {
 .featured-work {
   background-color: #0B3954;
   color: #FFFFFF;
+  display: grid;
+  grid-template-areas:
+    "featured-text featured-image";
+  grid-template-columns: 60% 40%;
 }
 
 .featured-text {
-  margin: 0px 50vw 0px 6vw;
-  padding: 50px 0px;
+  grid-area: featured-text;
+  padding: 0px 12vw;
 }
 
 .featured-image {
-  position: absolute;
-  top: 845px;
-  right: 60px;
+  align-self: flex-end;
+  grid-area: featured-image;
+  padding: 50px 0px 0px 50px;
 }
 
 /* Contact Section */
@@ -174,7 +174,7 @@ nav {
 
 .contact-icons {
   font-size: 3em;
-  padding: 25px 0px;
+  padding: 25px 0px 50px 0px;
 }
 
 /* Card Styling */
@@ -211,30 +211,8 @@ nav {
 }
 
 /* Image Styling */
-.right {
-  float:right;
-  width: 345px;
-  overflow: auto;
-}
-
-.left {
-  float: left;
-  width: 345px;
-}
-
-.right-large {
-  float: right;
-  width: 500px;
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
 .featured-image img {
-  max-width: 90%;
+  max-width: 60%;
 }
 
 .phone img {
@@ -282,6 +260,8 @@ img {
 }
 
 .top {
+  align-items: center;
+  background-color: #0B3954;
   display: grid;
   grid-template-areas:
     "summary phone";
@@ -362,7 +342,7 @@ img {
 
 .two-col-4 {
   display: grid;
-  grid-gap: 50px 60px;
+  grid-gap: 8vw 50px;
   grid-template-areas:
     "user-flow user-flow"
     "wire-images wireframes"
@@ -384,7 +364,7 @@ img {
 
 .two-col-5 {
   display: grid;
-  grid-gap: 50px 60px;
+  grid-gap: 8vw 50px;
   grid-template-columns: 50% 50%;
   grid-template-areas:
     "testing-two testing-two"
@@ -401,6 +381,7 @@ img {
 
 .link {
   grid-area: link;
+  line-height: 5em;
 }
 
 .about {
@@ -416,15 +397,10 @@ img {
   grid-area: contact;
 }
 
-.top {
-  background-color: #0B3954;
-  align-items: center;
-}
-
 .summary {
   color: #FFFFFF;
   grid-area: summary;
-  padding-left: 120px;
+  padding-left: 5vw;
 }
 
 .phone {
@@ -576,32 +552,34 @@ img {
   }
 }
 
-@media (max-width: 1155px) {
-  .featured-work {
-    grid-template-areas:
-    "featured-text"
-    "featured-image"
+@media (max-width: 1193px) {
+   .featured-work {
+    grid-template-columns: 100%;
   }
 
   .featured-image {
     display: none;
   }
 
-  .featured-text {
-    margin: 0px 120px 0px 120px;
-  }
-
   .hero {
     height: auto;
     max-width: 100%;
   }
+
+  .phone {
+    display: none;
+  }
+
+  .top {
+    grid-template-columns: 100%;
+  }
+
+  .summary {
+    padding-right: 5vw;
+  }
 }
-/*
-@media (max-width: 700px) {
 
-  }*/
-
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 700px) {
   .two-col-1 {
     grid-template-areas:
     "overview overview"
