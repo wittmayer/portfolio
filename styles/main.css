@@ -151,19 +151,24 @@ nav {
   color: #FFFFFF;
   display: grid;
   grid-template-areas:
-    "featured-text featured-image";
+    "featured-text empty-space";
   grid-template-columns: 60% 40%;
 }
 
 .featured-text {
   grid-area: featured-text;
   padding: 0px 12vw;
+  margin: 26px 0px 20px 0px;
 }
 
 .featured-image {
-  align-self: flex-end;
-  grid-area: featured-image;
-  padding: 50px 0px 0px 50px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.homepage {
+  position: relative;
 }
 
 /* Contact Section */
@@ -212,7 +217,7 @@ nav {
 
 /* Image Styling */
 .featured-image img {
-  max-width: 60%;
+  max-width: 88%;
 }
 
 .phone img {
