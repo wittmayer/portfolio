@@ -158,8 +158,12 @@ nav {
 
 .featured-image {
   position: absolute;
-  top: 845px;
-  right: 60px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.homepage {
+  position: relative;
 }
 
 /* Contact Section */
