@@ -1,3 +1,4 @@
+
 /* Fonts and Text Styling */
 h1 {
   font-family: 'Muli', sans-serif;
@@ -116,7 +117,18 @@ li {
   font-size: 5vw;
 }
 
-/* Homepage Hero*/
+.quote {
+  text-align: center;
+}
+
+/* Hero*/
+.about-hero {
+  background: url(../images/kayak.png) center / cover;
+  height: 100vh;
+  max-width: 100%;
+  min-height: 500px;
+}
+
 .hero {
   max-width: 100%;
   background: url(../images/hero-image.png) center / cover;
@@ -211,28 +223,6 @@ nav {
 }
 
 /* Image Styling */
-.right {
-  float:right;
-  width: 345px;
-  overflow: auto;
-}
-
-.left {
-  float: left;
-  width: 345px;
-}
-
-.right-large {
-  float: right;
-  width: 500px;
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
 .featured-image img {
   max-width: 90%;
 }
@@ -390,6 +380,61 @@ img {
     "testing-two testing-two"
     "conclusion conclusion";
   margin: 8vw 12vw;
+}
+
+.about-info {
+  display: grid;
+  grid-gap:50px;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "about-intro about-intro"
+    "quote-one quote-one"
+    "text-one text-one"
+    "van-image van-text"
+    "text-two text-two"
+    "travel-image travel-image"
+    "travel-text travel-text"
+    "quote-two quote-two";
+  margin: 8vw 12vw;
+}
+
+.van-image {
+  align-self: center;
+  grid-area: van-image;
+}
+
+.van-text {
+  grid-area: van-text;
+}
+
+.about-intro {
+  grid-area: about-intro;
+}
+
+.quote-one {
+  grid-area: quote-one;
+}
+
+.text-one {
+  grid-area: text-one;
+}
+
+.text-two {
+  grid-area: text-two;
+}
+
+.travel-image {
+  align-self: center;
+  grid-area: travel-image;
+  justify-self: center;
+}
+
+.travel-text {
+  grid-area: travel-text;
+}
+
+.quote-two {
+  grid-area: quote-two;
 }
 
 .logo {
@@ -577,6 +622,11 @@ img {
 }
 
 @media (max-width: 1155px) {
+  .about-hero {
+    height: auto;
+    max-width: 100%;
+  }
+
   .featured-work {
     grid-template-areas:
     "featured-text"
