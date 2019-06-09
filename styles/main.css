@@ -161,11 +161,16 @@ nav {
 .featured-work {
   background-color: #0B3954;
   color: #FFFFFF;
+  display: grid;
+  grid-template-areas:
+    "featured-text empty-space";
+  grid-template-columns: 60% 40%;
 }
 
 .featured-text {
-  margin: 0px 50vw 0px 6vw;
-  padding: 50px 0px;
+  grid-area: featured-text;
+  padding: 0px 12vw;
+  margin: 26px 0px 20px 0px;
 }
 
 .featured-image {
@@ -186,7 +191,7 @@ nav {
 
 .contact-icons {
   font-size: 3em;
-  padding: 25px 0px;
+  padding: 25px 0px 50px 0px;
 }
 
 /* Card Styling */
@@ -224,7 +229,7 @@ nav {
 
 /* Image Styling */
 .featured-image img {
-  max-width: 90%;
+  max-width: 88%;
 }
 
 .phone img {
@@ -272,6 +277,8 @@ img {
 }
 
 .top {
+  align-items: center;
+  background-color: #0B3954;
   display: grid;
   grid-template-areas:
     "summary phone";
@@ -352,7 +359,7 @@ img {
 
 .two-col-4 {
   display: grid;
-  grid-gap: 50px 60px;
+  grid-gap: 8vw 50px;
   grid-template-areas:
     "user-flow user-flow"
     "wire-images wireframes"
@@ -374,7 +381,7 @@ img {
 
 .two-col-5 {
   display: grid;
-  grid-gap: 50px 60px;
+  grid-gap: 8vw 50px;
   grid-template-columns: 50% 50%;
   grid-template-areas:
     "testing-two testing-two"
@@ -446,6 +453,7 @@ img {
 
 .link {
   grid-area: link;
+  line-height: 5em;
 }
 
 .about {
@@ -461,15 +469,10 @@ img {
   grid-area: contact;
 }
 
-.top {
-  background-color: #0B3954;
-  align-items: center;
-}
-
 .summary {
   color: #FFFFFF;
   grid-area: summary;
-  padding-left: 120px;
+  padding-left: 5vw;
 }
 
 .phone {
@@ -637,21 +640,25 @@ img {
     display: none;
   }
 
-  .featured-text {
-    margin: 0px 120px 0px 120px;
-  }
-
   .hero {
     height: auto;
     max-width: 100%;
   }
+
+  .phone {
+    display: none;
+  }
+
+  .top {
+    grid-template-columns: 100%;
+  }
+
+  .summary {
+    padding-right: 5vw;
+  }
 }
-/*
-@media (max-width: 700px) {
 
-  }*/
-
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 700px) {
   .two-col-1 {
     grid-template-areas:
     "overview overview"
