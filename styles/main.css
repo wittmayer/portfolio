@@ -637,8 +637,8 @@ img {
 
   .featured-work {
     grid-template-areas:
-    "featured-text"
-    "featured-image"
+    "featured-text featured-text"
+    "featured-image featured-image"
   }
 
   .featured-image {
