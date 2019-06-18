@@ -40,7 +40,6 @@ h6 {
   font-family: 'Muli', sans-serif;
   font-size: 1.5em;
   line-height: normal;
-  text-decoration: underline;
 }
 
  #bold a {
@@ -108,6 +107,14 @@ a {
 
 .contact-icons a {
   text-decoration: none;
+  color: #5E9E9F;
+}
+
+a:hover {
+  color: #5E9E9F;
+}
+
+.selected a {
   color: #5E9E9F;
 }
 
