@@ -115,7 +115,11 @@ a:hover {
 }
 
 .selected a {
-  color: #5E9E9F;
+  text-decoration: underline;
+}
+
+#selected {
+  text-decoration: underline;
 }
 
 .welcome-text h1 {
@@ -652,6 +656,11 @@ img {
     margin: auto;
     text-align:center;
   }
+
+  .welcome-text h1, h5, #bold {
+    font-size: 2em;
+  }
+
   .empty-space {
     display: none;
   }
@@ -781,5 +790,4 @@ img {
     grid-template-columns: 100%;
     justify-items: center;
   }
-
 }
