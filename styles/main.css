@@ -139,7 +139,7 @@ a:hover {
 /* Hero*/
 .about-hero {
   background: url(../images/kayak.png) center / cover;
-  height: 100vh;
+  height: 90vh;
   max-width: 100%;
   min-height: 500px;
 }
@@ -201,7 +201,7 @@ nav {
 /* Contact Section */
 .contact-footer {
   text-align: center;
-  padding: 50px 0px;
+  padding: 50px 0px 0px 0px;
 }
 
 .contact-icons {
@@ -235,7 +235,7 @@ nav {
   display: inline-block;
   font-size: 20px;
   font-family: 'Nunito', sans-serif;
-  margin: 30px 0px;
+  margin-bottom: 5vh;
   padding: 15px 20px;
   text-align: center;
   text-decoration: none;
@@ -257,7 +257,7 @@ nav {
 
 .wire-images img {
   align-items: center;
-  max-width: 70%;
+  max-width: 100%;
   margin: 30px 0px;
 }
 
@@ -370,6 +370,7 @@ img {
 }
 
 .two-col-4 {
+  align-items: center;
   display: grid;
   grid-gap: 8vw 50px;
   grid-template-areas:
@@ -467,6 +468,7 @@ img {
 .link {
   grid-area: link;
   line-height: 5em;
+  margin: 0px 10px;
 }
 
 .about {
@@ -485,7 +487,7 @@ img {
 .summary {
   color: #FFFFFF;
   grid-area: summary;
-  padding-left: 5vw;
+  padding-left: 12vw;
 }
 
 .phone {
@@ -629,7 +631,57 @@ img {
 }
 
 /*Responsive Design */
+@media (max-width: 450px) {
+  h2 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+  .about-info {
+    grid-gap: 5px;
+  }
+
+  .bottomnav {
+    display: grid;
+    grid-gap: 25px;
+  }
+
+  .contact-icons {
+    font-size: 2em;
+  }
+
+  .deliverables p {
+    margin: auto;
+  }
+
+  .link {
+    font-size: 1em;
+  }
+
+  .three-col-1 img {
+    max-width: 40%;
+  }
+
+  .three-col-1 p {
+    margin: auto;
+  }
+
+  .tools p {
+    margin: auto;
+  }
+}
+
 @media (max-width: 650px) {
+  .about-hero {
+    min-height: auto;
+  }
+
   .contact-footer h2 {
     font-size: 3em;
   }
@@ -670,7 +722,15 @@ img {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 4em;
+  }
+
+  h3 {
+    font-size: 3em;
+  }
+
   .about-info {
     grid-template-areas:
       "about-intro"
@@ -683,6 +743,10 @@ img {
       "travel-text"
       "quote-two";
     grid-template-columns: 100%;
+  }
+
+  .testing-sequences img {
+    margin: 0px;
   }
 
   .two-col-1 {
