@@ -129,7 +129,7 @@ a:hover {
 
 .welcome-text span {
   font-size: 5vw;
-  margin: 10px;
+  margin: 10px 10px 40px 10px;
 }
 
 .quote {
@@ -186,6 +186,14 @@ nav {
   grid-area: featured-text;
   padding: 0px 12vw;
   margin: 26px 0px 20px 0px;
+}
+
+.featured-text h2 {
+  font-size: 4em;
+}
+
+.featured-text h3 {
+  font-size: 2.5em;
 }
 
 .featured-image {
@@ -631,104 +639,46 @@ img {
 }
 
 /*Responsive Design */
-@media (max-width: 450px) {
-  h2 {
-    font-size: 3em;
-  }
-
-  h3 {
-    font-size: 2em;
-  }
-
-  p {
-    font-size: 1em;
-  }
-  .about-info {
-    grid-gap: 5px;
-  }
-
-  .bottomnav {
-    display: grid;
-    grid-gap: 25px;
-  }
-
-  .contact-icons {
-    font-size: 2em;
-  }
-
-  .deliverables p {
-    margin: auto;
-  }
-
-  .link {
-    font-size: 1em;
-  }
-
-  .three-col-1 img {
-    max-width: 40%;
-  }
-
-  .three-col-1 p {
-    margin: auto;
-  }
-
-  .tools p {
-    margin: auto;
-  }
-}
-
-@media (max-width: 650px) {
+@media (max-width: 1155px) {
   .about-hero {
-    min-height: auto;
+    height: auto;
+    max-width: 100%;
   }
 
-  .contact-footer h2 {
-    font-size: 3em;
-  }
-
-  .logo {
-    text-align: center;
-  }
-
-  .topnav {
-    justify-content: center;
-    text-align: center;
-    grid-gap: 25px;
+  .featured-work {
     grid-template-areas:
-      "logo logo logo logo"
-      "about about about about"
-      "work work work work"
-      "contact contact contact contact";
+    "featured-text featured-text"
+    "featured-image featured-image"
   }
 
-  .welcome {
-    grid-template-areas:
-      "welcome-text welcome-text";
-    grid-template-columns: 100%;
-    margin: auto;
-  }
-
-  .welcome-text {
-    margin: auto;
-    text-align:center;
-  }
-
-  .welcome-text h1, h5, #bold {
-    font-size: 2em;
-  }
-
-  .empty-space {
+  .featured-image {
     display: none;
   }
-}
 
+  .hero {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .phone {
+    display: none;
+  }
+
+  .top {
+    grid-template-columns: 100vw;
+  }
+
+  .summary {
+    padding-right: 5vw;
+  }
+}
 @media screen and (max-width: 768px) {
   h2 {
-    font-size: 4em;
+    font-size: 4em !important;
   }
 
   h3 {
-    font-size: 3em;
+    font-size: 3em !important;
   }
 
   .about-info {
@@ -826,36 +776,94 @@ img {
   }
 }
 
-@media (max-width: 1155px) {
+@media (max-width: 650px) {
   .about-hero {
-    height: auto;
-    max-width: 100%;
+    min-height: auto;
   }
 
-  .featured-work {
+  .contact-footer h2 {
+    font-size: 3em;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .topnav {
+    justify-content: center;
+    text-align: center;
+    grid-gap: 25px;
     grid-template-areas:
-    "featured-text featured-text"
-    "featured-image featured-image"
+      "logo logo logo logo"
+      "about about about about"
+      "work work work work"
+      "contact contact contact contact";
   }
 
-  .featured-image {
+  .welcome {
+    grid-template-areas:
+      "welcome-text welcome-text";
+    grid-template-columns: 100%;
+    margin: auto;
+  }
+
+  .welcome-text {
+    margin: auto;
+    text-align:center;
+  }
+
+  .welcome-text h1, h5, #bold {
+    font-size: 2em;
+    margin-left: 0px;
+  }
+
+  .empty-space {
     display: none;
   }
+}
 
-  .hero {
-    height: auto;
-    max-width: 100%;
+@media (max-width: 450px) {
+  h2 {
+    font-size: 2em !important;
   }
 
-  .phone {
-    display: none;
+  h3 {
+    font-size: 1.5em !important;
   }
 
-  .top {
-    grid-template-columns: 100vw;
+  p {
+    font-size: 1em;
+  }
+  .about-info {
+    grid-gap: 5px;
   }
 
-  .summary {
-    padding-right: 5vw;
+  .bottomnav {
+    display: grid;
+    grid-gap: 25px;
+  }
+
+  .contact-icons {
+    font-size: 2em;
+  }
+
+  .deliverables p {
+    margin: auto;
+  }
+
+  .link {
+    font-size: 1em;
+  }
+
+  .three-col-1 img {
+    max-width: 40%;
+  }
+
+  .three-col-1 p {
+    margin: auto;
+  }
+
+  .tools p {
+    margin: auto;
   }
 }
