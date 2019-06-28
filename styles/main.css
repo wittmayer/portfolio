@@ -24,10 +24,12 @@ h3 {
 }
 
 h4 {
-  font-family: 'MuliBlack', sans-serif;
-  font-size: 3em;
+  font-family: 'Muli', sans-serif;
+  font-size: 1.5em;
   font-weight: bolder;
   line-height: 1;
+  margin: 25px 10px 10px 10px;
+  text-transform: uppercase;
 }
 
 h5 {
@@ -73,7 +75,6 @@ a {
   font-family: 'Muli', sans-serif;
   font-size: 1.5em;
 }
-
 
 .contact-icons ul {
   list-style-type: none;
@@ -199,7 +200,7 @@ nav {
 .featured-image {
   position: absolute;
   bottom: 0px;
-  right: 0px;
+  right: 8vw;
 }
 
 .homepage {
@@ -266,7 +267,11 @@ nav {
 .wire-images img {
   align-items: center;
   max-width: 100%;
-  margin: 30px 0px;
+  margin: 0px 0px 60px 0px;
+}
+
+.shadow {
+  box-shadow: 0px 2px 4px rgb(0,0,0,.5);
 }
 
 .testing-sequences img {
@@ -279,6 +284,10 @@ nav {
 #logo-sketch {
   margin: 30px 0px;
   max-width: 70%;
+}
+
+#pref-test {
+  text-align: center;
 }
 
 img {
@@ -378,7 +387,6 @@ img {
 }
 
 .two-col-4 {
-  align-items: center;
   display: grid;
   grid-gap: 8vw 50px;
   grid-template-areas:
@@ -601,7 +609,7 @@ img {
 
 .brand-image {
   grid-area: brand-image;
-  justify-self: center;
+  justify-self: ;
   text-align: center;
 }
 
@@ -639,12 +647,7 @@ img {
 }
 
 /*Responsive Design */
-@media (max-width: 1155px) {
-  .about-hero {
-    height: auto;
-    max-width: 100%;
-  }
-
+@media (max-width: 1230px) {
   .featured-work {
     grid-template-areas:
     "featured-text featured-text"
@@ -653,6 +656,13 @@ img {
 
   .featured-image {
     display: none;
+  }
+}
+
+@media (max-width: 1155px) {
+  .about-hero {
+    height: auto;
+    max-width: 100%;
   }
 
   .hero {
