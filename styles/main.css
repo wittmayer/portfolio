@@ -28,18 +28,25 @@ h4 {
   font-size: 3em;
   font-weight: bolder;
   line-height: 1;
+  margin: 10px;
 }
 
 h5 {
   font-family: 'Muli', sans-serif;
   font-size: 1.5em;
   line-height: 1;
+  margin: 10px;
 }
 
 h6 {
   font-family: 'Muli', sans-serif;
   font-size: 1.5em;
   line-height: normal;
+  margin: 10px;
+}
+
+hr {
+  margin: 5vw;
 }
 
  #bold a {
@@ -136,6 +143,15 @@ a:hover {
   text-align: center;
 }
 
+.project-text {
+  box-shadow: 0 4px 8px;
+  padding: 25px;
+}
+
+.additional-projects {
+  margin-top: 50px;
+}
+
 /* Hero*/
 .about-hero {
   background: url(../images/kayak.png) center / cover;
@@ -166,6 +182,10 @@ nav {
 
 .welcome-text {
   margin: 0px 50px 50px 0px;
+}
+
+.centered {
+  text-align: center;
 }
 
 /* About and Featured Sections */
@@ -223,6 +243,20 @@ nav {
   color: #FFFFFF;
 }
 
+.project-image-one {
+  display: grid;
+  justify-items: center;
+  height: 200px;
+  text-align: center;
+}
+
+.project-image-two {
+  display: grid;
+  justify-items: center;
+  height: 200px;
+  text-align: center;
+}
+
 /* Button Styling */
 .btn-black {
   border:3px solid #00120B;
@@ -276,6 +310,18 @@ nav {
   text-align: center;
 }
 
+.project-image-one img {
+  align-self: center;
+  height: auto;
+}
+
+.project-image-two img {
+  align-self: center;
+  height: auto;
+  max-width: 50%;
+
+}
+
 #logo-sketch {
   margin: 30px 0px;
   max-width: 70%;
@@ -317,6 +363,27 @@ img {
 
 .welcome-text {
   display: grid;
+}
+
+.projects {
+  display: grid;
+  grid-area: projects;
+  grid-gap: 5vw;
+  grid-template-areas:
+    "project-one project-two";
+  grid-template-columns: repeat (2, 1fr);
+  margin: 6vw;
+}
+
+.project-one {
+  /* box-shadow: 0 4px 8px; */
+  grid-area: project-one;
+
+}
+
+.project-two {
+  /* box-shadow: 0 4px 8px; */
+  grid-area: project-two;
 }
 
 .two-col-1 {
