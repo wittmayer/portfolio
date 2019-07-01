@@ -211,11 +211,28 @@ nav {
 .contact-footer {
   text-align: center;
   padding: 50px 0px 0px 0px;
+  font-weight: bold;
 }
 
 .contact-icons {
-  font-size: 3em;
-  padding: 25px 0px 50px 0px;
+  font-size: 2em;
+  padding: 0px 0px 50px 0px;
+}
+
+form {
+  display: inline-grid;
+  margin: 35px 25px 25px 25px;
+  width: 50vw;
+}
+
+input, textarea {
+    font-family: 'Muli', sans-serif;
+    font-size: 1em;
+    color: #666260;
+    border: 1px solid #c4beb9;
+    background: #fff;
+    padding: 1em;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Card Styling */
@@ -685,6 +702,7 @@ img {
 @media screen and (max-width: 768px) {
   h2 {
     font-size: 4em !important;
+    margin: 20px 10px;
   }
 
   h3 {
@@ -833,16 +851,8 @@ img {
 }
 
 @media (max-width: 450px) {
-  h2 {
-    font-size: 2em !important;
-  }
-
-  h3 {
-    font-size: 1.5em !important;
-  }
-
   p {
-    font-size: 1em;
+    font-size: 1.2em;
   }
   .about-info {
     grid-gap: 5px;
