@@ -235,6 +235,11 @@ input, textarea {
     transition: all 0.3s ease-in-out;
 }
 
+.btn-black:hover {
+  color: #5E9E9F;
+  border: 3px solid #5E9E9F;
+}
+
 /* Card Styling */
 .blue-background {
   background-color: #0B3954;
