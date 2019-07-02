@@ -115,6 +115,10 @@ p {
   margin: 10px;
 }
 
+.welcome-text h5 {
+  margin: 0px 17px;
+}
+
 .welcome-text span {
   font-size: 5vw;
   margin: 10px 10px 40px 10px;
