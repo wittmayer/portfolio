@@ -139,6 +139,11 @@ p {
   line-height: 1;
 }
 
+#chartTitle {
+  text-align: center;
+  margin-top: 50px;
+}
+
 #selected {
   text-decoration: underline;
 }
@@ -879,6 +884,10 @@ img {
     grid-gap: 25px;
   }
 
+  .charts {
+    display: none;
+  }
+  
   .contact-icons {
     font-size: 2em;
   }
