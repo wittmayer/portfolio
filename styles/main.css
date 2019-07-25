@@ -153,7 +153,7 @@ nav {
   color: #00120B;
   font-family: 'Muli', sans-serif;
   font-size: 1.5rem;
-  padding: 50px;
+  padding: 50px 10px;
   word-spacing: 20px;
 }
 
@@ -219,25 +219,41 @@ nav {
 
 /* Contact Section */
 form {
-  display: inline-grid;
-  margin: 35px 25px 25px 25px;
-  width: 50vw;
+  display: block;
+  margin: 35px auto 50px auto;
+  width: 50%;
+}
+
+.formview {
+  justify-content: center;
+
+}
+
+.formview textarea{
+  height: 8em;
 }
 
 input, textarea {
-    font-family: 'Muli', sans-serif;
-    font-size: 1em;
-    color: #666260;
-    border: 1px solid #c4beb9;
-    background: #fff;
-    padding: 1em;
-    transition: all 0.3s ease-in-out;
+  color: #666260;
+  background: #fff;font-family: 'Muli', sans-serif;
+  border: 1px solid #c4beb9;
+  font-size: 1em;
+  margin: 10px 0px;
+  padding: 1em;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
 }
 
 .contact-footer {
   text-align: center;
   padding: 50px 0px 0px 0px;
   font-weight: bold;
+  margin: 0px 5vw;
 }
 
 .contact-icons {
@@ -268,6 +284,19 @@ input, textarea {
 .btn-black:hover {
   color: #5E9E9F;
   border: 3px solid #5E9E9F;
+}
+
+.submit {
+  border:3px solid #00120B;
+  color:#00120B;
+  display: block;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+  margin: 30px 0px 30px 5px;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .btn-white {
@@ -518,7 +547,8 @@ img {
 
 .logo {
   grid-area: logo;
-  margin: -13px;
+  margin-top: -13px;
+  margin-left: 50px;
   min-height: 75px;
   text-align: left;
 }
@@ -534,6 +564,7 @@ img {
 
 .contact {
   grid-area: contact;
+  margin-right: 50px;
 }
 /* ---*/
 .two-col-1 {
@@ -826,12 +857,30 @@ img {
     min-height: auto;
   }
 
+  .contact {
+    margin-right: 0px;
+  }
+
   .contact-footer h2 {
     font-size: 3em;
   }
 
+  form {
+    margin: 35px 0px 50px 0px;
+    width: 100%;
+  }
+
+  input, textarea {
+    width: 88%;
+  }
+
+  nav {
+    padding: 50px 10px 75px 10px;
+  }
+
   .logo {
     text-align: center;
+    margin-left: 0px;
   }
 
   .topnav {
@@ -861,9 +910,16 @@ img {
     text-align:center;
   }
 
-  .welcome-text h1, h5, #bold {
+  .welcome-text h5, #bold {
     font-size: 2em;
     margin-left: 0px;
+  }
+
+  .welcome-text h1 {
+    font-family: 'MuliBlack', sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+    margin: 25px 10px;
   }
 
   .empty-space {
@@ -887,7 +943,7 @@ img {
   .charts {
     display: none;
   }
-  
+
   .contact-icons {
     font-size: 2em;
   }
