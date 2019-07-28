@@ -38,7 +38,7 @@
           <h2>Tada Yoga App</h2>
           <h3>UX | UI | Brand Design</h3>
           <p>I designed a cloud storage app that centralizes yoga-related content for yoga instructors.</p>
-          <a class="btn-white" href="https://invis.io/G9R8GEA2XUV">View Prototype</a>
+          <a class="btn-white" href="https://invis.io/G9R8GEA2XUV" target="_blank">View Prototype</a>
         </article>
         <article class="phone blue-background" role="article" aria-label="article-two">
           <img src="./images/phone.svg" alt="phone_prototype">
@@ -93,13 +93,114 @@
           <img src="./images/versatility.svg" alt="circles_icon">
           <p>Lack of versatility</p>
         </article>
-        <a class="link" href="https://docs.google.com/document/d/1eVDUXb6dzn0pPn6Y8C0HJJ4CNoYdh_qemdQ6MSLBrdw/edit?usp=sharing">View Competitive Analysis >></a>
+        <a class="link" href="https://docs.google.com/document/d/1eVDUXb6dzn0pPn6Y8C0HJJ4CNoYdh_qemdQ6MSLBrdw/edit?usp=sharing" target="_blank">View Competitive Analysis >></a>
       </section>
       <section class="two-col-2" role="region" aria-label="section-four">
         <article class="user-research" role="article" aria-label="article-one">
           <h3>User Research</h3>
           <p>From there, I wanted to find out more about my target audience. Who are they? What do they need? I analyzed the yoga app needs of 44 users aged 18 to 74 and discovered that about 86% of yoga instructors wanted to be able to save content and almost half of all users wanted to be able to create their own sequences.</p>
-          <a class="link" href="https://docs.google.com/document/d/1gtrFhy3Q78lvmFwti7QYZQ74obSR9AflnZv_4axbQHk/edit?usp=sharing">View Research >></a>
+          <aside class="charts" role="complementary" aria-label="research-charts">
+            <h4 id="chartTitle">How often do you practice yoga?</h5>
+            <canvas id="myPieChart" width="400" height="200"></canvas>
+            <script src="../chart.js/Chart.js"></script>
+            <!--- <script src="./pieChart.js"></script>  -->
+            <script>
+            var ctx = document.getElementById('myPieChart').getContext('2d');
+            var myPieChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Daily', 'Weekly', 'Monthly', 'Every few months', 'Once or twice a year', 'Hardly ever'],
+                    datasets: [{
+                        label: '%',
+                        data: [17.9, 39.3, 14.3, 21.4, 0, 7.1],
+                        backgroundColor: [
+                            'rgba(59, 171, 220, 1)',
+                            'rgba(11, 57, 84, 1)',
+                            'rgba(33, 104, 105, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(190, 187, 187, 1)',
+                            'rgba(245, 240, 246, 1)'
+                        ],
+                        borderColor: [
+                            'rgba(59, 171, 220, 1)',
+                            'rgba(11, 57, 84, 1)',
+                            'rgba(33, 104, 105, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(190, 187, 187, 1)',
+                            'rgba(245, 240, 246, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                  layout: {
+                    padding: {
+                      left: 0,
+                      right: 0,
+                      top: 50,
+                      bottom: 50
+                    }
+                  },
+                  legend: {
+                    position: 'top',
+                    padding: 10
+                  }
+                }
+            });
+          </script>
+            <h4 id="chartTitle">What app features do you find useful?</h5>
+            <canvas id="myChart" width="400" height="200"></canvas>
+            <script src="./chart.js/Chart.js"></script>
+            <!--- <script src="./barChart.js"></script> -->
+            <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Save content', 'View other content', 'Watch yoga videos', 'Create sequences', 'Collaborate on sequences', 'Share and send sequences'],
+                    datasets: [{
+                        label: '% of yoga instructors',
+                        data: [86, 71, 57, 43, 43, 43],
+                        backgroundColor: [
+                            'rgba(59, 171, 220, .2)',
+                            'rgba(11, 57, 84, .2)',
+                            'rgba(33, 104, 105, .2)',
+                            'rgba(75, 192, 192, .2)',
+                            'rgba(59, 171, 220, .2)',
+                            'rgba(11, 57, 84, .2)'
+                        ],
+                        borderColor: [
+                            'rgba(59, 171, 220, 1)',
+                            'rgba(11, 57, 84, 1)',
+                            'rgba(33, 104, 105, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(59, 171, 220, 1)',
+                            'rgba(11, 57, 84, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    },
+                    layout: {
+                      padding: {
+                        left: 0,
+                        right: 0,
+                        top: 50,
+                        bottom: 50
+                      }
+                    }
+                  }
+            });
+          </script>
+          </aside>
+          <a class="link" href="https://docs.google.com/document/d/1gtrFhy3Q78lvmFwti7QYZQ74obSR9AflnZv_4axbQHk/edit?usp=sharing" target="_blank">View Research >></a>
         </article>
         <article class="user-personas" role="article" aria-label="article-two">
           <h3>User Personas</h3>
@@ -110,19 +211,19 @@
         <article class="persona1" role="article" aria-label="article-one">
           <img src="./images/persona1.svg" alt="studio_owner">
           <h6>Studio Owner</h6>
-          <p>Short on time</p>
+          <p>Running a yoga studio takes a lot of time. So much so that Madhav doesn't teach as much as he used to. He misses the connection he used to have with his students.</p>
         </article>
         <article class="persona2" role="article" aria-label="article-two">
           <img src="./images/persona2.svg" alt="new_instructor">
           <h6>New Instructor</h6>
-          <p>Short on time and money</p>
+          <p>Amber's work schedule takes up most of her day and she'd like to make more money. She doesn't know when she'd have the time to add more to her plate.</p>
         </article>
         <article class="persona3" role="article" aria-label="article-three">
           <img src="./images/persona3.svg" alt="seasoned_student">
           <h6>Seasoned Student</h6>
-          <p>Travels often for work</p>
+          <p>Working as a consultant makes it difficult for Kris to establish a routine. She is concerned about money, and only wants to live this nomadic lifestyle until she can pay off her student loans.</p>
         </article>
-        <a class="link" href="https://drive.google.com/file/d/1D_R89GqkFao5o3ug2rxRxnP_DXeULoMf/view?usp=sharing">View User Personas >></a>
+        <a class="link" href="https://drive.google.com/file/d/1D_R89GqkFao5o3ug2rxRxnP_DXeULoMf/view?usp=sharing" target="_blank">View User Personas >></a>
       </section>
       <section class="two-col-3" role="region" aria-label="section-six">
         <article class="user-stories" role="article" aria-label="article-one">
@@ -138,26 +239,26 @@
           <img src="./images/sticky2.svg" alt="categorize_saved_content">
         </article>
         <article class="sticky3" role="article" aria-label="article-three">
-          <img class="sticky3" src="./images/sticky3.svg" alt="create_sequences">
+          <img src="./images/sticky3.svg" alt="create_sequences">
         </article>
-        <a class="link" href="https://docs.google.com/document/d/1y0AXQMbPr7g4W9zVEpa-4aRrp1H9grp004QCksc3wJA/edit?usp=sharing">View More >></a>
+        <a class="link" href="https://docs.google.com/document/d/1y0AXQMbPr7g4W9zVEpa-4aRrp1H9grp004QCksc3wJA/edit?usp=sharing" target="_blank">View More >></a>
       </section>
       <section class="two-col-4" role="region" aria-label="section-eight">
         <article class="user-flow" role="article" aria-label="article-one">
           <h3>User Flows</h3>
           <p>Next, I mapped out the user flow to get a better understanding of how the user would go through the processes of creating a sequence and saving content.</p>
           <p>I included some edge cases in the flows as well to illustrate what would happen if a user encountered a problem, such as searching for a pose but it wasn’t there.</p>
-          <a class="link" href="https://drive.google.com/file/d/10V3IqsA-XvPhc7SoKAgBBvMflQtxV4oV/view?usp=sharing">View More >></a>
+          <a class="link" href="https://drive.google.com/file/d/10V3IqsA-XvPhc7SoKAgBBvMflQtxV4oV/view?usp=sharing" target="_blank">View More >></a>
         </article>
         <article class="wireframes" role="article" aria-label="article-two">
           <h3>Wireframes</h3>
           <p>Once I had an understanding of how the user would move through the app, I began to work on wireframe sketches. Using pencil and paper, I sketched out my ideas for different functions on the site. I sketched out the homepage, an article view page, and a sequence page.</p>
           <p>Next, I used Figma to design a digital wireframe. This helped me further visualize and refine how the content would be spaced out.</p>
-          <a class="link" href="https://drive.google.com/drive/folders/1vwy3tDLlEHI3bJquGkz9Xx7kMRINJHCv?usp=sharing">View Wireframes >></a>
+          <a class="link" href="https://drive.google.com/drive/folders/1vwy3tDLlEHI3bJquGkz9Xx7kMRINJHCv?usp=sharing" target="_blank">View Wireframes >></a>
         </article>
         <article class="wire-images" role="article" aria-label="article-three">
-          <img src="./images/wireframe-article-view.svg" alt="wireframe_article">
-          <img src="./images/wireframe-explore.svg" alt="wireframe_homepage">
+          <img class="shadow" src="./images/wireframe-article-view.svg" alt="wireframe_article">
+          <img class="shadow" src="./images/wireframe-explore.svg" alt="wireframe_homepage">
         </article>
         <article class="brand-text" role="article" aria-label="article-four">
           <h3>Branding</h3>
@@ -165,12 +266,12 @@
           <p>Tada’s name was chosen from the sanskrit word “tadasana” meaning mountain pose. Mountain pose is a grounding pose in yoga and is used often as the beginning and start of a vinyasa or sun salutation. The app’s purpose is to provide foundation and grounding in their yoga practice so I thought this name would convey that feeling well.</p>
           <p>I chose green as Tada’s main color because it symbolizes growth and guidance. I wanted the app to be a place where users could learn and grow in their practice and teaching of yoga.</p>
           <p>Creating Tada’s logo was difficult. There are a multitude of different wellness apps on the market and a lot of them use the lotus flower as a logo. I too, used a lotus flower. It is a strong symbol in the yoga community and is easily recognizable. To make it stand out from the rest, I made the center leaf of the flower look like a silhouette of someone doing mountain pose. This tied the logo and the name together seamlessly.</p>
-          <a class="link" href="https://drive.google.com/file/d/1eh-ShSZCyrl4xtwqcCn7cK_llQAN9E9p/view?usp=sharing">View Style Guide >></a>
+          <a class="link" href="https://drive.google.com/file/d/1eh-ShSZCyrl4xtwqcCn7cK_llQAN9E9p/view?usp=sharing" target="_blank">View Style Guide >></a>
         </article>
         <article class="brand-image" role="article" aria-label="article-five">
-          <img id="tada-sketch" src="./images/tada-sketch.png" alt="font_sketch">
+          <img id="tada-sketch" class="shadow" src="./images/tada-sketch.png" alt="font_sketch">
           <img id="logo-sketch" src="./images/logo-sketches.png" alt="logo_sketch">
-          <img id="styleguide" src="./images/styleguide.png" alt="branding_styleguide">
+          <img id="styleguide" class="shadow" src="./images/styleguide.png" alt="branding_styleguide">
         </article>
         <article class="mockup-image" role="article" aria-label="article-six">
           <img src="./images/mockup.svg" alt="mockup">
@@ -179,13 +280,16 @@
           <h3>Mockups</h3>
           <p>After building out the wireframes, I began creating low fidelity mockups to use in the first round of user testing. These mockups had one main issue: users were unsure of how to save an article.</p>
           <p>The next step was to use the branding style guide (see below) to create a high fidelity prototype and test it. I created both mobile and desktop versions of the prototype. These high-fidelity prototypes went through a final round of testing. That testing showed that changes made to the “save article” function were successful, but now users were having trouble saving their custom sequence and signing up for an account.</p>
-          <a class="link" href="https://drive.google.com/open?id=1N3N7_LqXc6S77PS4uJj8kP-9Hz2lyHAP">View Mockups >></a>
+          <a class="link" href="https://drive.google.com/open?id=1N3N7_LqXc6S77PS4uJj8kP-9Hz2lyHAP" target="_blank">View Mockups >></a>
         </article>
         <article class="testing" role="article" aria-label="article-eight">
           <h3>Testing</h3>
+          <h4>Preference Testing</h4>
           <p>I conducted preference testing for the article save buttons (using a circular “add” button versus a rectangular “save” button) to determine what would be most effective.</p>
           <p>Results showed that 86% preferred the rectangular “save” button.</p>
-          <img id="pref-test" src="./images/pref-test.svg" alt="preference_test">
+          <aside id="pref-test" role="complementary" aria-label="preference_test">
+            <img src="./images/pref-test.svg" alt="preference_test">
+          </aside>
           <p>Due to the results of the preference testing, I changed the button to the rectangular “save” button and in the last round of testing, 100% of users were able to complete the article saving task effectively.</p>
         </article>
       </section>
@@ -196,27 +300,35 @@
       </section>
       <section class="two-col-5" role="region" aria-label="section-ten">
         <article class="testing-two" role="article" aria-label="article-one">
+          <h4>User Testing</h4>
           <p>User testing proved very useful. During the first round, users had one main issue: saving an article. The buttons and interface were not intuitive enough and users were unsure where the process was leading them.</p>
           <p>As a result, I changed the button for saving an article and separated out the sharing functions.</p>
           <aside class="testing-sequences" role="complementary" aria-label="sequence-images">
-            <img id="sequence-old" src="./images/sequence-old.svg" alt="old_sequence">
-            <img id="sequence-new" src="./images/sequence-new.svg" alt="new_sequence">
+            <img class="shadow" id="sequence-old" src="./images/sequence-old.svg" alt="old_sequence">
+            <img class="shadow" id="sequence-new" src="./images/sequence-new.svg" alt="new_sequence">
           </aside>
           <p>During the second round of user testing, 100% of users were able to easily save the article and new issues emerged. The main issue users had was finding the sign up page. The option to sign up for an account wasn’t clear enough. The other issue users had was saving their sequence. The original functionality was using a back button to navigate to the edit sequence page.<p>
           <p>After the testing, I added hierarchy to the log in/sign up process and added a sequence editing card to the sequence building page.</p>
-          <a class="link" href="https://drive.google.com/drive/folders/1bwD6qTlr0wYNLXSKKp13wsfD0p0hjw3W?usp=sharing">View Test Analysis >></a>
+          <a class="link" href="https://drive.google.com/drive/folders/1bwD6qTlr0wYNLXSKKp13wsfD0p0hjw3W?usp=sharing" target="_blank">View Test Analysis >></a>
         </article>
         <article class="conclusion" role="article" aria-label="article-two">
           <h3>Conclusions</h3>
           <p>The research was very conclusive in this project and it very clearly pointed out designs that weren’t working for the user, most specifically the article save button.</p>
           <p>I assumed that saving information would be the simplest task. I was surprised to see the impact that just changing a button type had (circular add versus rectangular”save”) on the usability of the app. Given more time, I would have taken a deeper dive into the “create your own sequence” function of the app and conducted more user research and usability testing specifically within that function.</p>
           <p>My biggest lessons that I learned throughout this project were in the visual design aspect of the project. Adding additional hierarchy and changing button visuals made a huge impact in how people were able to access the features of the app. In the future, I will approach designs with more detail from the beginning - thinking how an extra step might help funnel the user better and question how I would get to that point with no knowledge about the design.</p>
-          <img src="./images/prototypes.svg" alt="prototype">
+          <a class="btn-black" href="https://invis.io/G9R8GEA2XUV" target="_blank">View Prototype</a>
         </article>
       </section>
     </main>
     <footer id= "contact-me" class="contact-footer" role="contactinfo">
-      <h2>Contact Me</h2>
+      <h3>Contact Me</h3>
+      <div class="formview">
+        <form method="POST" action="https://formspree.io/melissa.wittmayer@gmail.com">
+          <input type="email" name="email" placeholder="Your email">
+          <textarea name="message" placeholder="Your Message"></textarea>
+          <button class= "btn-black" type="submit">Send Message</button>
+        </form>
+      </div>
       <ul class="contact-icons">
         <li>
           <a href="https://www.linkedin.com/in/melissawittmayer/">
