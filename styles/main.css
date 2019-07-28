@@ -55,6 +55,10 @@ h6 {
   text-transform: uppercase;
 }
 
+hr {
+  margin: 5vw;
+}
+
 p {
   font-family: 'Muli', sans-serif;
   font-size: 1.5em;
@@ -70,6 +74,10 @@ p {
   text-align: center;
   text-decoration: none;
   word-spacing: 50px;
+}
+
+.centered {
+  text-align: center;
 }
 
 .contact-icons a {
@@ -88,6 +96,10 @@ p {
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+.mobile-break {
+  display: none;
 }
 
 .quote {
@@ -836,16 +848,25 @@ img {
     grid-template-columns: 100%;
   }
 
+  .mobile-break {
+    display: block;
+    margin: 10vw;
+  }
+
+  .project-image-one {
+    height: auto;
+  }
+
+  .project-image-two {
+    height: 200px;
+  }
+
   .projects {
     grid-template-areas:
       "project-one"
       "project-two"
       "project-three"
       "project-four";
-  }
-
-  .project-three {
-    margin-top: 100px;
   }
 
   .testing-sequences img {
