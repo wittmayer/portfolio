@@ -94,6 +94,15 @@ p {
   text-align: center;
 }
 
+.project-text {
+  box-shadow: 0 4px 8px;
+  padding: 25px;
+}
+
+.additional-projects {
+  margin-top: 50px;
+}
+
 .selected a {
   text-decoration: underline;
 }
@@ -267,6 +276,18 @@ textarea {
   color: #FFFFFF;
 }
 
+.project-image-one, .project-image-two, .project-image-three {
+  display: grid;
+  justify-items: center;
+  height: 300px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project-image-three {
+  height: auto;
+}
+
 /* Button Styling */
 .btn-black {
   border:3px solid #00120B;
@@ -326,6 +347,18 @@ img {
   max-width: 70%;
 }
 
+.project-image-one img {
+  align-self: center;
+  height: auto;
+}
+
+.project-image-two img {
+  align-self: center;
+  height: auto;
+  max-width: 50%;
+
+}
+
 .shadow {
   box-shadow: 0px 2px 4px rgb(0,0,0,.5);
 }
@@ -375,6 +408,29 @@ img {
 
 .about-intro {
   grid-area: about-intro;
+}
+
+.projects {
+  display: grid;
+  grid-area: projects;
+  grid-gap: 5vw;
+  grid-template-areas:
+    "project-one project-two"
+    "project-three project-four";
+  grid-template-columns: repeat (2, 1fr);
+  margin: 6vw;
+}
+
+.project-one{
+  grid-area: project-one;
+}
+
+.project-two {
+  grid-area: project-two;
+}
+
+.project-three {
+  grid-area: project-three;
 }
 
 .quote-one {
@@ -780,6 +836,18 @@ img {
     grid-template-columns: 100%;
   }
 
+  .projects {
+    grid-template-areas:
+      "project-one"
+      "project-two"
+      "project-three"
+      "project-four";
+  }
+
+  .project-three {
+    margin-top: 100px;
+  }
+
   .testing-sequences img {
     margin: 0px;
   }
@@ -871,7 +939,7 @@ img {
   }
 
   input, textarea {
-    width: 88%; 
+    width: 88%;
   }
 
   nav {
