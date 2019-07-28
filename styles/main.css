@@ -243,18 +243,16 @@ nav {
   color: #FFFFFF;
 }
 
-.project-image-one {
+.project-image-one, .project-image-two, .project-image-three {
   display: grid;
   justify-items: center;
-  height: 200px;
+  height: 300px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.project-image-two {
-  display: grid;
-  justify-items: center;
-  height: 200px;
-  text-align: center;
+.project-image-three {
+  height: auto;
 }
 
 /* Button Styling */
@@ -370,20 +368,22 @@ img {
   grid-area: projects;
   grid-gap: 5vw;
   grid-template-areas:
-    "project-one project-two";
+    "project-one project-two"
+    "project-three project-four";
   grid-template-columns: repeat (2, 1fr);
   margin: 6vw;
 }
 
-.project-one {
-  /* box-shadow: 0 4px 8px; */
+.project-one{
   grid-area: project-one;
-
 }
 
 .project-two {
-  /* box-shadow: 0 4px 8px; */
   grid-area: project-two;
+}
+
+.project-three {
+  grid-area: project-three;
 }
 
 .two-col-1 {
@@ -760,6 +760,18 @@ img {
       "travel-text"
       "quote-two";
     grid-template-columns: 100%;
+  }
+
+  .projects {
+    grid-template-areas:
+      "project-one"
+      "project-two"
+      "project-three"
+      "project-four";
+  }
+
+  .project-three {
+    margin-top: 100px;
   }
 
   .testing-sequences img {
