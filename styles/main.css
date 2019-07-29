@@ -46,12 +46,14 @@ h5 {
   font-family: 'Muli', sans-serif;
   font-size: 1.5em;
   line-height: 1;
+  margin: 10px;
 }
 
 h6 {
   font-family: 'Muli', sans-serif;
   font-size: 1.5em;
   line-height: normal;
+  margin: 10px;
   text-transform: uppercase;
 }
 
@@ -98,17 +100,13 @@ p {
   overflow: hidden;
 }
 
-.mobile-break {
-  display: none;
-}
-
 .quote {
   text-align: center;
 }
 
 .project-text {
-  box-shadow: 0 4px 8px;
-  padding: 25px;
+  /*box-shadow: 0 4px 8px;
+  padding: 25px;*/
 }
 
 .additional-projects {
@@ -296,10 +294,6 @@ textarea {
   text-align: center;
 }
 
-.project-image-three {
-  height: auto;
-}
-
 /* Button Styling */
 .btn-black {
   border:3px solid #00120B;
@@ -371,6 +365,12 @@ img {
 
 }
 
+.project-image-three img {
+  align-self: center;
+  height: auto;
+  max-width: 50%;
+}
+
 .shadow {
   box-shadow: 0px 2px 4px rgb(0,0,0,.5);
 }
@@ -435,14 +435,20 @@ img {
 
 .project-one{
   grid-area: project-one;
+  box-shadow: 0 4px 8px;
+  padding: 25px;
 }
 
 .project-two {
   grid-area: project-two;
+  box-shadow: 0 4px 8px;
+  padding: 25px;
 }
 
 .project-three {
   grid-area: project-three;
+  box-shadow: 0 4px 8px;
+  padding: 25px;
 }
 
 .quote-one {
@@ -846,11 +852,6 @@ img {
       "travel-text"
       "quote-two";
     grid-template-columns: 100%;
-  }
-
-  .mobile-break {
-    display: block;
-    margin: 10vw;
   }
 
   .project-image-one {
