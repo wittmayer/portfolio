@@ -357,7 +357,7 @@ img {
 .project-image-one img {
   align-self: center;
   height: auto;
-  max-width: 65%;
+  /*max-width: 65%; */
 
 }
 
