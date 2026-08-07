@@ -1,0 +1,73 @@
+/* Melissa Wittmayer — portfolio
+   Editorial layout, converted from design export to standalone HTML/CSS.
+   Palette: ink #101319, paper #fdfcf9, blue accent #2743d6 */
+
+:root {
+  --ink: #101319;
+  --paper: #fdfcf9;
+  --blue: #2743d6;
+  --blue-soft: #8fa2f7;
+  --muted: #6a6e78;
+  --faint: #8a8e98;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Instrument Sans', Helvetica, sans-serif;
+}
+
+a { color: var(--ink); text-decoration: none; }
+::selection { background: rgba(39, 67, 214, 0.16); }
+
+/* --- hover states (replacing the export's style-hover attributes) --- */
+.lnk:hover { color: var(--blue); }
+.btn-contact:hover { background: var(--blue); color: var(--paper); border-style: solid; }
+.row-hover { transition: background .3s ease; }
+.row-hover:hover { background: rgba(39, 67, 214, 0.035); }
+
+/* --- scroll reveal --- */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+/* --- responsive: overrides for the inline desktop layout --- */
+@media (max-width: 860px) {
+  .wrap { padding: 10px !important; }
+  .sec { padding-left: 20px !important; padding-right: 20px !important; }
+  .footpad { padding-left: 20px !important; padding-right: 20px !important; }
+  .nav-sections { display: none !important; }
+
+  .g-stack { grid-template-columns: 1fr !important; }
+  .g-2 { grid-template-columns: 1fr !important; }
+  .g-3 { grid-template-columns: 1fr !important; }
+  .g-meta { grid-template-columns: 1fr 1fr !important; }
+  .g-arc { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .g-q { grid-template-columns: 1fr !important; gap: 6px 0 !important; }
+  .g-about { grid-template-columns: 1fr !important; }
+  .g-contact { grid-template-columns: 1fr !important; gap: 28px !important; }
+
+  .g-work { grid-template-columns: 1fr !important; gap: 18px !important; }
+  .g-work .fig { aspect-ratio: 16 / 9 !important; }
+
+  .g-exp { grid-template-columns: 22px 1fr !important; gap: 2px 16px !important; }
+  .g-exp .exp-date { grid-column: 2 !important; }
+
+  .pad-dark { padding: 32px 22px 36px !important; }
+  .frame-pad { padding: 30px 22px !important; }
+
+  .d-hero { font-size: 40px !important; }
+  .d-h1 { font-size: 34px !important; }
+  .d-h2 { font-size: 30px !important; }
+  .d-h3 { font-size: 30px !important; }
+  .d-stat { font-size: 48px !important; }
+}
+
+@media (max-width: 520px) {
+  .g-meta { grid-template-columns: 1fr !important; }
+  .g-meta > div { border-left: none !important; }
+}

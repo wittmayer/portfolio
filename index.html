@@ -1,154 +1,295 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>Portfolio | Melissa Wittmayer</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Melissa Wittmayer — Product design leader, AI & complex systems</title>
+  <meta name="description" content="Melissa Wittmayer is a product design leader working at the intersection of AI, complex systems, and product strategy — helping teams turn emerging technology into experiences people can understand, trust, and use.">
 
-    <!-- Material Design Lite -->
-		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-light_blue.min.css">
-		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/site.css">
+</head>
+<body>
+<div class="wrap" style="min-height: 100vh; overflow-x: hidden; padding: 24px;">
+ <div style="max-width: 1272px; margin: 0 auto; border: 1.5px solid #101319; background: #fdfcf9;">
 
-		<!-- Font Awesome -->
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
-
-		<!-- Custom Styles-->
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/main.css">
-
-  </head>
-  <body>
-    <header class="hero" role="banner" aria-label="header">
-      <nav class="topnav" role="navigation" aria-label="main-navigation">
-        <div class="logo">
-          <a href="index.html">
-            <img src="./images/logo-white.svg" alt="logo_white">
-          </a>
-        </div>
-        <div class="about"><a href="about-me.html" title="about">About</a></div>
-        <div class="work"><a href="./project.html" title="work">Work</a></div>
-        <div class="contact"><a href="#contact-me" title="contact">Contact</a></div>
+  <header style="position: sticky; top: 24px; z-index: 50; background: #fdfcf9; border-bottom: 1.5px solid #101319;">
+    <div class="sec" style="padding: 0 48px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+      <a href="#top" style="display: flex; align-items: center; gap: 9px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500;">
+        <span style="width: 7px; height: 7px; background: #2743d6; display: inline-block;"></span>Melissa Wittmayer
+      </a>
+      <nav style="display: flex; align-items: center; gap: 26px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.11em; text-transform: uppercase; color: #6a6e78;">
+        <span class="nav-sections" style="display: flex; align-items: center; gap: 26px;">
+          <a class="lnk" href="#work" style="color: inherit;">01 Work</a>
+          <a class="lnk" href="#thinking" style="color: inherit;">02 How I think</a>
+          <a class="lnk" href="#talks" style="color: inherit;">03 Talks</a>
+          <a class="lnk" href="#about" style="color: inherit;">04 About</a>
+        </span>
+        <a class="btn-contact" href="#contact" style="color: #101319; border: 1px dashed #2743d6; padding: 7px 14px; transition: background .2s ease, color .2s ease;">Contact</a>
       </nav>
-      <aside class="welcome" role="complementary" aria-label="welcome">
-        <div class="empty-space"></div>
-        <div class="welcome-text">
-          <h5>Hey there! My name is</h5>
-          <h1>Melissa Wittmayer</h1>
-          <span id="bold">I'm a <a>UX Designer</a> that works from <a>everywhere</a>.</span>
-        </div>
-      </aside>
-    </header>
-    <main class="homepage" role="main">
-      <section class="about-teaser" role="region" aria-label="section-one">
-        <p>In 2018, I sold most of my things and moved into a campervan to work remotely and see all 50 states in a year…</p>
-        <a class="btn-black" href="about-me.html">read more</a>
-      </section>
-      <section class="featured-work" role="region" aria-label="section-two">
-        <article class="featured-text" role="article" aria-label="article-one">
-          <h2>Grazing App</h2>
-          <h3>UX | UI | Brand Design</h3>
-          <p>I designed a lifestyle app that helps people with dietary restrictions find restaurants with food they can eat.</p>
-          <a class="btn-white" href="https://invis.io/29T88945YXZ" target="_blank">view more</a>
-        </article>
-      </section>
-      <aside class="featured-image">
-        <a href="https://invis.io/29T88945YXZ" target="_blank">
-        <img src="./images/phone-grazing.svg" alt="phone_prototype">
-        </a>
-     </aside>
-    </main>
-    <main class="additional-projects" role=main>
-     <h2 class="centered">More Projects</h2>
-    <hr></hr>
-     <section class="projects" role="region" aria-label="section-two">
-       <article class="project-one" role="article" aria-label="article-one">
-         <aside class="project-image-one">
-           <a href= "./project.html"><img src="./images/tada-logo.svg" alt="tada-logo"></a>
-         </aside>
-         <div class="project-text">
-           <h4>Tada Yoga App Case Study</h4>
-           <h5>UX | UI | Brand Design</h5>
-         </div>
-       </article><article class="project-two" role="article" aria-label="article-two">
-         <aside class="project-image-two">
-           <a href= "https://www.vivianstorm.com/" target="_blank"><img src="./images/vivian-storm.png" alt="site-picture"></a>
-         </aside>
-         <div class="project-text">
-           <h4>Vivian Storm</h4>
-           <h5>Site Design</h5>
-         </div>
-       </article>
-       <article class="project-three" role="article" aria-label="article-three">
-         <aside class="project-image-three">
-           <img src="./images/wholesum-logo.svg" alt="wholesum-logo">
-         </aside>
-         <div class="project-text">
-           <h4>WholeSum Health</h4>
-           <h5>Brand Design</h5>
-         </div>
-       </article>
-       <article class="project-four" role="article" aria-label="article-four">
-         <aside class="project-image-four">
-           <img src="./images/mosaIQ-logo.jpg" alt="mosaIQ-logo">
-         </aside>
-         <div class="project-text">
-           <h4>mosaIQ</h4>
-           <h5>Logo Design</h5>
-         </div>
-       </article>
-     </section>
-    </main>
-    <hr></hr>
-    <footer role="contentinfo">
-      <section id= "contact-me" class="contact-footer">
-        <h3>Contact Me</h3>
-        <div class="formview">
-          <form method="POST" action="https://formspree.io/melissa.wittmayer@gmail.com">
-            <input type="email" name="email" placeholder="Your email">
-            <textarea name="message" placeholder="Your Message"></textarea>
-            <button class= "submit" type="submit">Send Message</button>
-          </form>
-        </div>
-        <ul class="contact-icons">
-          <li>
-            <a href="https://www.linkedin.com/in/melissawittmayer/">
-              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/wittmayer">
-              <i class="fa fa-github-square" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/BigMelsa">
-              <i class="fa fa-twitter-square" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li> <a href="mailto:melissa.wittmayer@gmail.com">
-            <i class="fa fa-envelope-square" aria-hidden="true"></i>
-          </a>
-          </li>
-        </ul>
-      </section>
-      <section class = bottomnav>
-        <a id="selected" href="index.html" title="home">Home</a>
-        <a href="about-me.html" title="about">About</a>
-        <a href="./project.html" title="work">Work</a>
-        <a href="./contact.html" title="contact">Contact</a>
-      </section>
-    </footer>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141697957-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    </div>
+  </header>
 
-      gtag('config', 'UA-141697957-1');
-    </script>
-  </body>
+  <div>
+
+    <section id="top" class="sec" style="padding: 96px 48px 88px;">
+      <div class="frame-pad" style="position: relative; border: 1px dashed rgba(16,19,25,0.35); padding: 52px 56px 56px;">
+        <span style="position: absolute; top: -4px; left: -4px; width: 7px; height: 7px; background: #2743d6;"></span>
+        <span style="position: absolute; top: -4px; right: -4px; width: 7px; height: 7px; background: #2743d6;"></span>
+        <span style="position: absolute; bottom: -4px; left: -4px; width: 7px; height: 7px; background: #2743d6;"></span>
+        <span style="position: absolute; bottom: -4px; right: -4px; width: 7px; height: 7px; background: #2743d6;"></span>
+        <h1 class="d-hero" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 72px; line-height: 1.04; letter-spacing: -0.018em; margin: 0; max-width: 21ch; text-wrap: pretty;">
+          I design the <em style="font-style: italic; color: #2743d6;">systems</em> behind the experience and help redefine how UX shapes what gets built.
+        </h1>
+      </div>
+
+      <p data-reveal="1" style="transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); margin: 44px 0 0; font-size: 18.5px; line-height: 1.55; color: #101319; max-width: 68ch; text-wrap: pretty;">
+        I'm a product design leader working at the intersection of AI, complex systems, and product strategy. I help teams turn emerging technology into experiences people can understand, trust, and use.
+      </p>
+    </section>
+
+    <section id="work" class="sec" style="padding: 0 48px 112px;">
+      <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid #101319;">
+        <h2 style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; margin: 0; color: #101319;"><span style="color: #2743d6; margin-right: 12px;">01</span>Work</h2>      </div>
+
+      <!-- Case study 01 — live -->
+      <a href="case-study-01.html" data-reveal="2" class="row-hover g-work" style="transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1), background .3s ease; display: grid; grid-template-columns: 76px minmax(0,1fr) 272px; gap: 40px; align-items: start; padding: 40px 0 44px; border-bottom: 1px dashed rgba(16,19,25,0.3);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #2743d6; padding-top: 10px; display: flex; align-items: center; gap: 8px;"><span style="width: 5px; height: 5px; background: #2743d6; display: inline-block;"></span>01</div>
+        <div>
+          <h3 class="d-h2" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 42px; line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 12px;">Shaping AI Agent Behavior</h3>
+          <p style="margin: 0 0 16px; font-size: 19px; line-height: 1.4; color: #2a2e37;">Enabling UX to take ownership of eval frameworks</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.62; color: #6a6e78; max-width: 56ch; text-wrap: pretty;">Shifting away from manual, engineer-owned processes to an automated eval process that gave the team rich behavioral data.</p>
+          <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 7px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6a6e78;">
+            <span style="border: 1px dashed rgba(16,19,25,0.3); padding: 5px 10px;">AI</span>
+            <span style="border: 1px dashed rgba(16,19,25,0.3); padding: 5px 10px;">Systems</span>
+            <span style="border: 1px dashed rgba(16,19,25,0.3); padding: 5px 10px;">Evaluation</span>
+          </div>
+        </div>
+        <div class="fig" style="aspect-ratio: 4/3; border: 1px dashed rgba(39,67,214,0.5); background-image: repeating-linear-gradient(45deg, rgba(39,67,214,0.14) 0 1px, transparent 1px 8px); display: flex; align-items: flex-end; padding: 11px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #2743d6;">fig 1.1 — eval dashboard</span>
+        </div>
+      </a>
+
+      <!-- Case study 02 — live -->
+      <a href="case-study-02.html" data-reveal="3" class="row-hover g-work" style="transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1), background .3s ease; display: grid; grid-template-columns: 76px minmax(0,1fr) 272px; gap: 40px; align-items: start; padding: 40px 0 44px; border-bottom: 1px dashed rgba(16,19,25,0.3);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #2743d6; padding-top: 10px; display: flex; align-items: center; gap: 8px;"><span style="width: 5px; height: 5px; background: #2743d6; display: inline-block;"></span>02</div>
+        <div>
+          <h3 class="d-h2" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 42px; line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 12px;">The Project That “Couldn't Fail”</h3>
+          <p style="margin: 0 0 16px; font-size: 19px; line-height: 1.4; color: #2a2e37;">Finding alignment across leadership teams</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.62; color: #6a6e78; max-width: 56ch; text-wrap: pretty;">How siloed practices threatened the success of the company's biggest bet — and what I did to turn it around.</p>
+          <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 7px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6a6e78;">
+            <span style="border: 1px dashed rgba(16,19,25,0.3); padding: 5px 10px;">Strategy</span>
+            <span style="border: 1px dashed rgba(16,19,25,0.3); padding: 5px 10px;">Systems</span>
+            <span style="border: 1px dashed rgba(16,19,25,0.3); padding: 5px 10px;">Influence</span>
+          </div>
+        </div>
+        <div class="fig" style="aspect-ratio: 4/3; border: 1px dashed rgba(39,67,214,0.5); background-image: repeating-linear-gradient(45deg, rgba(39,67,214,0.14) 0 1px, transparent 1px 8px); display: flex; align-items: flex-end; padding: 11px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #2743d6;">fig 2.1 — alignment map</span>
+        </div>
+      </a>
+
+      <!-- Case study 03 — page not yet written; shown as coming soon -->
+      <div class="g-work" style="display: grid; grid-template-columns: 76px minmax(0,1fr) 272px; gap: 40px; align-items: start; padding: 40px 0 44px; border-bottom: 1px solid #101319; opacity: 0.72;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #2743d6; padding-top: 10px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px;">
+          <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 5px; height: 5px; background: #2743d6; display: inline-block;"></span>03</span>
+          <span style="border: 1px solid #2743d6; color: #2743d6; padding: 4px 8px; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;">Coming soon</span>
+        </div>
+        <div>
+          <h3 class="d-h2" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 42px; line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 12px;">Thinking in Workflows</h3>
+          <p style="margin: 0 0 16px; font-size: 19px; line-height: 1.4; color: #2a2e37;">Moving from bespoke products to a catalog of actions</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.62; color: #6a6e78; max-width: 56ch; text-wrap: pretty;">In a world where the company is always pivoting, how do we create consistency and prevent teams from duplicating work?</p>
+          <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 7px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6a6e78;">
+            <span style="border: 1px dashed rgba(16,19,25,0.3); padding: 5px 10px;">Systems</span>
+            <span style="border: 1px dashed rgba(16,19,25,0.3); padding: 5px 10px;">Workflows</span>
+            <span style="border: 1px dashed rgba(16,19,25,0.3); padding: 5px 10px;">Strategy</span>
+          </div>
+        </div>
+        <div class="fig" style="aspect-ratio: 4/3; border: 1px dashed rgba(39,67,214,0.5); background-image: repeating-linear-gradient(45deg, rgba(39,67,214,0.14) 0 1px, transparent 1px 8px); display: flex; align-items: flex-end; padding: 11px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #2743d6;">fig 3.1 — action catalog</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="thinking" class="sec" style="padding: 0 48px 112px;">
+      <div class="pad-dark" style="background-color: #0e121c; background-image: linear-gradient(rgba(255,255,255,0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.055) 1px, transparent 1px); background-size: 24px 24px, 24px 24px; color: #fdfcf9; padding: 56px 56px 60px;">
+        <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,0.3); margin-bottom: 48px;">
+          <h2 style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; margin: 0; color: #fdfcf9;"><span style="color: #8fa2f7; margin-right: 12px;">02</span>How I think</h2>        </div>
+        <div class="g-2" style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 28px;">
+          <div data-reveal="5" style="transition: opacity .8s ease, transform .8s ease; border: 1px dashed rgba(255,255,255,0.28); padding: 30px 32px 34px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 18px; display: flex; align-items: center; gap: 8px;"><span style="width: 5px; height: 5px; background: #8fa2f7; display: inline-block;"></span>01 · AI evaluation</div>
+            <h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 1.15; margin: 0 0 12px;">Design for outcomes, not outputs.</h3>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.62; color: rgba(253,252,249,0.62); max-width: 42ch; text-wrap: pretty;">UX should help define how AI quality is measured — not just how AI behaves on screen.</p>
+          </div>
+          <div data-reveal="6" style="transition: opacity .8s ease .06s, transform .8s ease .06s; border: 1px dashed rgba(255,255,255,0.28); padding: 30px 32px 34px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 18px; display: flex; align-items: center; gap: 8px;"><span style="width: 5px; height: 5px; background: #8fa2f7; display: inline-block;"></span>02 · Agentic UX</div>
+            <h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 1.15; margin: 0 0 12px;">Design for systems that act.</h3>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.62; color: rgba(253,252,249,0.62); max-width: 42ch; text-wrap: pretty;">When products act on a user's behalf, UX becomes about orchestration, oversight, and intervention.</p>
+          </div>
+          <div data-reveal="7" style="transition: opacity .8s ease .12s, transform .8s ease .12s; border: 1px dashed rgba(255,255,255,0.28); padding: 30px 32px 34px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 18px; display: flex; align-items: center; gap: 8px;"><span style="width: 5px; height: 5px; background: #8fa2f7; display: inline-block;"></span>03 · Workflows</div>
+            <h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 1.15; margin: 0 0 12px;">Design the system beneath the interface.</h3>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.62; color: rgba(253,252,249,0.62); max-width: 42ch; text-wrap: pretty;">Products change. Workflows persist. Mapping the underlying system creates reusable experiences instead of one-off features.</p>
+          </div>
+          <div data-reveal="8" style="transition: opacity .8s ease .18s, transform .8s ease .18s; border: 1px dashed rgba(255,255,255,0.28); padding: 30px 32px 34px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 18px; display: flex; align-items: center; gap: 8px;"><span style="width: 5px; height: 5px; background: #8fa2f7; display: inline-block;"></span>04 · Trust</div>
+            <h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 1.15; margin: 0 0 12px;">Make complex systems understandable.</h3>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.62; color: rgba(253,252,249,0.62); max-width: 42ch; text-wrap: pretty;">Trust comes from transparency, appropriate uncertainty, and giving people meaningful control when things go wrong.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="talks" class="sec" style="padding: 0 48px 112px;">
+      <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid #101319; margin-bottom: 40px;">
+        <h2 style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; margin: 0; color: #101319;"><span style="color: #2743d6; margin-right: 12px;">03</span>Talks &amp; writing</h2>      </div>
+      <div class="g-stack" style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 64px;">
+        <div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8e98; padding-bottom: 12px; border-bottom: 1px dashed rgba(16,19,25,0.3);">Speaking</div>
+          <!-- TODO: add real talk links -->
+          <a class="lnk" href="https://uxdx.com/profile/melissa-wittmayer/" target="_blank" rel="noopener" style="display: grid; grid-template-columns: 28px minmax(0,1fr) auto; gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">1</span>
+            <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15;">UXDX</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #8a8e98;">Community Event ↗</span>
+          </a>
+          <a class="lnk" href="https://drive.google.com/file/d/14qNmRTSUY5tWoxcirTvzBQp0A9uxshlH/view?usp=sharing" target="_blank" rel="noopener" style="display: grid; grid-template-columns: 28px minmax(0,1fr) auto; gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">2</span>
+            <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15;">Prompt:UX</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #8a8e98;">Slides ↗</span>
+          </a>
+          <a class="lnk" href="https://womenwhocode.com/" target="_blank" rel="noopener" style="display: grid; grid-template-columns: 28px minmax(0,1fr) auto; gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">3</span>
+            <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15;">Women Who Code</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #8a8e98;">Talk ↗</span>
+          </a>
+          <div style="display: grid; grid-template-columns: 28px minmax(0,1fr) auto; gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">4</span>
+            <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15;">World Usability Congress</span>
+            <span style="display: inline-flex; gap: 16px; align-items: baseline; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #8a8e98;">
+              <a class="lnk" href="https://worldusabilitycongress.com/agenda-26/?agenda=YFnETx" target="_blank" rel="noopener" style="color: inherit;">Talk ↗</a>
+              <a class="lnk" href="https://worldusabilitycongress.com/agenda-26/?agenda=bddZn4" target="_blank" rel="noopener" style="color: inherit;">Panel ↗</a>
+            </span>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8e98; padding-bottom: 12px; border-bottom: 1px dashed rgba(16,19,25,0.3);">Writing</div>
+          <a class="lnk" href="https://medium.com/@melissawittmayer" target="_blank" rel="noopener" style="display: grid; grid-template-columns: 28px minmax(0,1fr) auto; gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">5</span>
+            <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15;">Medium Articles</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #8a8e98;">Posts ↗</span>
+          </a>
+          <div style="margin-top: 32px; border: 1px dashed rgba(39,67,214,0.5); padding: 24px 26px; background-image: repeating-linear-gradient(45deg, rgba(39,67,214,0.055) 0 1px, transparent 1px 9px);">
+            <p style="margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6;">Speaking inquiries</p>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">I speak on AI evaluation, agentic UX, and leading design in technical organizations. <a class="lnk" href="#contact" style="color: #2743d6; border-bottom: 1px solid rgba(39,67,214,0.4);">Get in touch →</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="sec" style="padding: 0 48px 96px;">
+      <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid #101319; margin-bottom: 44px;">
+        <h2 style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; margin: 0; color: #101319;"><span style="color: #2743d6; margin-right: 12px;">04</span>About</h2>      </div>
+      <div class="g-about" style="display: grid; grid-template-columns: 300px minmax(0,1fr); gap: 64px; align-items: start;">
+        <div>
+          <!-- TODO: replace with a portrait photo -->
+          <div style="aspect-ratio: 4/5; border: 1px dashed rgba(39,67,214,0.5); background-image: repeating-linear-gradient(45deg, rgba(39,67,214,0.14) 0 1px, transparent 1px 8px); display: flex; align-items: flex-end; padding: 12px;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #2743d6;">fig 4.1 — portrait (add photo)</span>
+          </div>
+          <div style="margin-top: 20px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; line-height: 2; letter-spacing: 0.06em; color: #6a6e78;">
+            <div>Based in — Santa Barbara, CA</div>
+            <div>Currently — Director of UX, Ontra</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8e98; padding-bottom: 12px; border-bottom: 1px dashed rgba(16,19,25,0.3); margin-bottom: 26px;">Leadership philosophy</div>
+          <p style="margin: 0 0 20px; font-family: 'Instrument Serif', Georgia, serif; font-size: 32px; line-height: 1.2; color: #101319; max-width: 22ch; text-wrap: pretty;">People don't fail — systems do.</p>
+          <p style="margin: 0 0 44px; font-size: 16.5px; line-height: 1.65; color: #6a6e78; max-width: 64ch; text-wrap: pretty;">My role as a leader is to create the conditions for great work: clarity around the problem, trust within the team, and enough context and autonomy for people to make good decisions. I want teams to become more capable because I was there, not more dependent on me.</p>
+
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8e98; padding-bottom: 12px; border-bottom: 1px dashed rgba(16,19,25,0.3); margin-bottom: 4px;">I lead with three principles</div>
+          <div class="g-q" style="display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 20px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #2743d6;">Human-centered</div>
+            <div style="font-size: 16px; line-height: 1.6; color: #6a6e78; text-wrap: pretty;">People do their most creative and thoughtful work when they feel psychologically safe.</div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 20px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #2743d6;">Strengths-based</div>
+            <div style="font-size: 16px; line-height: 1.6; color: #6a6e78; text-wrap: pretty;">People do their best work when they're empowered to lean into what they do best.</div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 20px 0; border-bottom: 1px dashed rgba(16,19,25,0.22); margin-bottom: 52px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #2743d6;">Systems-oriented</div>
+            <div style="font-size: 16px; line-height: 1.6; color: #6a6e78; text-wrap: pretty;">When something isn't working, I look at the environment, incentives, processes, and structures around the team.</div>
+          </div>
+
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8e98; padding-bottom: 12px; border-bottom: 1px dashed rgba(16,19,25,0.3);">Experience</div>
+          <!-- TODO: replace placeholder roles with real experience -->
+          <div class="g-exp" style="display: grid; grid-template-columns: 28px 128px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 20px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">1</div>
+            <div class="exp-date" style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #6a6e78;">2026 — Now</div>
+            <div><div style="font-size: 18.5px; line-height: 1.35;">Director of UX</div><div style="font-size: 15px; color: #6a6e78; margin-top: 3px;">Ontra · Agentic legal &amp; contract product suite — director leadership and hands-on IC across three teams</div></div>
+          </div>
+          <div class="g-exp" style="display: grid; grid-template-columns: 28px 128px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 20px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">2</div>
+            <div class="exp-date" style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #6a6e78;">2019 — 2026</div>
+            <div><div style="font-size: 18.5px; line-height: 1.35;">UX Manager, AI Agents</div><div style="font-size: 15px; color: #6a6e78; margin-top: 3px;">AppFolio · Design strategy for the AI assistant &amp; agent ecosystem — grew from UX Designer to Manager</div></div>
+          </div>
+          <div class="g-exp" style="display: grid; grid-template-columns: 28px 128px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 20px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">3</div>
+            <div class="exp-date" style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #6a6e78;">2016 — 2019</div>
+            <div><div style="font-size: 18.5px; line-height: 1.35;">UX &amp; Product Design Consultant</div><div style="font-size: 15px; color: #6a6e78; margin-top: 3px;">Freelance · Research-led design for e-commerce and content strategy</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="sec" style="padding: 0 48px 72px;">
+      <div class="g-contact" style="border-top: 1px solid #101319; padding-top: 48px; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 56px; align-items: end;">
+        <h2 class="d-h1" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 60px; line-height: 1.02; letter-spacing: -0.02em; margin: 0; max-width: 22ch; text-wrap: pretty;">Interested in working together?</h2>
+        <div style="display: flex; flex-direction: column; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; min-width: 300px;">
+          <a class="lnk" href="mailto:melissa.wittmayer@gmail.com" style="display: flex; justify-content: space-between; gap: 32px; border-bottom: 1px dashed rgba(16,19,25,0.3); padding: 10px 0;"><span style="color: #8a8e98;">Email</span><span>melissa.wittmayer@gmail.com</span></a>
+          <a class="lnk" href="https://www.linkedin.com/in/melissawittmayer/" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; gap: 32px; border-bottom: 1px dashed rgba(16,19,25,0.3); padding: 10px 0;"><span style="color: #8a8e98;">LinkedIn</span><span>/in/melissawittmayer ↗</span></a>
+          <a class="lnk" href="Wittmayer_Resume.pdf" target="_blank" rel="noopener" style="display: flex; justify-content: space-between; gap: 32px; border-bottom: 1px dashed rgba(16,19,25,0.3); padding: 10px 0;"><span style="color: #8a8e98;">Resume</span><span>PDF ↗</span></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footpad" style="border-top: 1.5px solid #101319; padding: 20px 48px 22px; display: flex; justify-content: space-between; gap: 24px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8e98;">
+    <span>© 2026 Melissa Wittmayer</span>
+    <a class="lnk" href="#top" style="color: inherit;">Back to top ↑</a>
+  </footer>
+ </div>
+</div>
+
+<script>
+(function () {
+  var root = document.body;
+  if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  function show(el) {
+    el.style.opacity = "1";
+    el.style.transform = "none";
+    setTimeout(function () { el.style.transition = "none"; el.style.opacity = "1"; el.style.transform = "none"; }, 1100);
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -10% 0px", threshold: 0.04 });
+  function scan() {
+    root.querySelectorAll("[data-reveal]").forEach(function (el) {
+      if (el.dataset.revealSeen) return;
+      el.dataset.revealSeen = "1";
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) return;
+      var t = el.style.transition;
+      el.style.transition = "none";
+      el.style.opacity = "0";
+      el.style.transform = "translateY(14px)";
+      void el.offsetHeight;
+      el.style.transition = t;
+      io.observe(el);
+    });
+  }
+  if (document.readyState !== "loading") scan(); else document.addEventListener("DOMContentLoaded", scan);
+  setTimeout(function () { root.querySelectorAll("[data-reveal]").forEach(show); }, 2200);
+})();
+</script>
+</body>
 </html>
