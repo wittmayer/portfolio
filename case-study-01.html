@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shaping AI agent behavior — Case study · Melissa Wittmayer</title>
+  <meta name="description" content="Building the evaluation framework that moved ownership of agent quality to UX and made agent behavior measurable.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/site.css">
+</head>
+<body>
+<div class="wrap" style="min-height: 100vh; overflow-x: hidden; padding: 24px;">
+ <div style="max-width: 1272px; margin: 0 auto; border: 1.5px solid #101319; background: #fdfcf9;">
+
+  <header style="position: sticky; top: 24px; z-index: 50; background: #fdfcf9; border-bottom: 1.5px solid #101319;">
+    <div class="sec" style="padding: 0 48px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 9px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500;">
+        <span style="width: 7px; height: 7px; background: #2743d6; display: inline-block;"></span>Melissa Wittmayer
+      </a>
+      <nav style="display: flex; align-items: center; gap: 26px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.11em; text-transform: uppercase; color: #6a6e78;">
+        <span class="nav-sections" style="display: flex; align-items: center; gap: 26px;">
+          <a class="lnk" href="index.html#work" style="color: inherit;">Work</a>
+          <a class="lnk" href="index.html#thinking" style="color: inherit;">How I think</a>
+          <a class="lnk" href="index.html#talks" style="color: inherit;">Talks</a>
+          <a class="lnk" href="index.html#about" style="color: inherit;">About</a>
+        </span>
+        <a class="btn-contact" href="index.html#contact" style="color: #101319; border: 1px dashed #2743d6; padding: 7px 14px; transition: background .2s ease, color .2s ease;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="sec" style="padding: 88px 48px 0;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #8a8e98; margin-bottom: 32px;">
+      <span style="color: #2743d6;">Case study 01</span>
+      <span>AI agent product · Enterprise SaaS</span>
+    </div>
+
+    <div class="frame-pad" style="position: relative; border: 1px dashed rgba(16,19,25,0.35); padding: 48px 52px 52px;">
+      <span style="position: absolute; top: -4px; left: -4px; width: 7px; height: 7px; background: #2743d6;"></span>
+      <span style="position: absolute; top: -4px; right: -4px; width: 7px; height: 7px; background: #2743d6;"></span>
+      <span style="position: absolute; bottom: -4px; left: -4px; width: 7px; height: 7px; background: #2743d6;"></span>
+      <span style="position: absolute; bottom: -4px; right: -4px; width: 7px; height: 7px; background: #2743d6;"></span>
+      <h1 class="d-h1" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 68px; line-height: 1.04; letter-spacing: -0.018em; margin: 0 0 20px; text-wrap: pretty;">Shaping <em style="font-style: italic; color: #2743d6;">AI agent behavior</em></h1>
+      <p style="margin: 0; font-size: 21px; line-height: 1.45; color: #2a2e37; text-wrap: pretty;">When no one owns the definition of “good,” an engineer's gut feel becomes the quality bar. I built an evaluation framework that moved ownership of agent quality to UX. It turned subjective judgments about behavior into measurable signals the team could use to improve the product.</p>
+    </div>
+
+    <div class="g-meta" style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 0; margin-top: 40px; border: 1px dashed rgba(16,19,25,0.3);">
+      <div style="padding: 22px 24px 24px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8e98; margin-bottom: 10px;">Role</div>
+        <div style="font-size: 16px; line-height: 1.45; color: #101319;">Director of UX</div>
+      </div>
+      <div style="padding: 22px 24px 24px; border-left: 1px dashed rgba(16,19,25,0.22);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8e98; margin-bottom: 10px;">Partners</div>
+        <div style="font-size: 16px; line-height: 1.45; color: #101319;">Product, Engineering, ML</div>
+      </div>
+      <div style="padding: 22px 24px 24px; border-left: 1px dashed rgba(16,19,25,0.22);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8e98; margin-bottom: 10px;">Contribution</div>
+        <div style="font-size: 16px; line-height: 1.45; color: #101319;">Evaluation framework, LLM-as-judge evaluators, rollout strategy by access level</div>
+      </div>
+      <div style="padding: 22px 24px 24px; border-left: 1px dashed rgba(16,19,25,0.22);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8e98; margin-bottom: 10px;">Also became</div>
+        <div style="font-size: 16px; line-height: 1.45; color: #101319;">3 speaking engagements and 3 published articles</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="glance" class="sec" style="padding: 88px 48px 0;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-bottom: 18px; border-bottom: 1.5px solid #101319; margin-bottom: 40px;">
+      <h2 style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; margin: 0; color: #101319;">At a glance</h2>
+    </div>
+    <div class="g-3" style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; border: 1px dashed rgba(16,19,25,0.35);">
+      <div data-reveal="1" style="transition: opacity .8s ease, transform .8s ease; padding: 32px 34px 36px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 16px;">Problem</div>
+        <p style="margin: 0 0 14px; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">We were improving an AI agent without a shared definition of what “good” looked like.</p>
+        <p style="margin: 0 0 14px; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">Issue selection depended on manually flagged conversation threads and an engineer's judgment about what seemed wrong. The team spent roughly four hours a week reading threads by hand, then had little confidence that a change actually improved the experience.</p>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">The result was a slow feedback loop:</p>
+        <p style="margin: 10px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; line-height: 1.7; letter-spacing: 0.02em; color: #6a6e78; text-wrap: pretty;">find a problem → investigate manually → make a change → hope it helped</p>
+      </div>
+      <div data-reveal="2" style="transition: opacity .8s ease .06s, transform .8s ease .06s; padding: 32px 34px 36px; border-left: 1px dashed rgba(16,19,25,0.28);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 16px;">Solution</div>
+        <p style="margin: 0 0 14px; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">I introduced an evaluation framework that made experience quality explicit, measurable, and scalable.</p>
+        <p style="margin: 0 0 14px; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">Instead of engineering deciding which conversations looked problematic, UX and Product defined the behaviors that mattered. We translated those judgments into structured evaluators, including LLM-as-a-judge systems that could score conversations at scale.</p>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">The goal wasn't simply to automate evaluation. It was to make UX's definition of quality executable.</p>
+      </div>
+      <div data-reveal="3" style="transition: opacity .8s ease .12s, transform .8s ease .12s; padding: 32px 34px 36px; border-left: 1px dashed rgba(16,19,25,0.28); background-image: repeating-linear-gradient(45deg, rgba(39,67,214,0.055) 0 1px, transparent 1px 9px);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 16px;">Impact</div>
+        <p style="margin: 0 0 20px; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">The time from investigating an issue to shipping a code change dropped from four weeks to one — and the team moved from reading a small set of flagged threads to behavioral signals across the whole experience.</p>
+        <div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 44px; line-height: 1; color: #2743d6;">4 wks → 1 wk</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="setup" class="sec" style="padding: 88px 48px 0;">
+    <div class="g-stack" style="display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 48px; align-items: start;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #2743d6; padding-top: 12px;">The setup</div>
+      <div>
+        <h3 class="d-h2" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.06; margin: 0 0 18px;">Someone else was defining what good looks like</h3>
+        <p style="margin: 0 0 16px; font-size: 18px; line-height: 1.55; color: #2a2e37; text-wrap: pretty;">Evals are how you stop relying on a person manually reading threads to know whether something is wrong. They're a structured way to measure whether an agent is doing what it's supposed to do — often with LLM judges scoring outputs at scale.</p>
+        <p style="margin: 0 0 32px; font-size: 18px; line-height: 1.55; color: #2a2e37; text-wrap: pretty;">Which makes evals a design artifact. Every eval encodes a judgment about what a good interaction is. When engineering owns that alone, UX inherits a quality bar it never set — and the fixes chase whatever happened to get flagged.</p>
+        <div style="border: 1px dashed rgba(39,67,214,0.5); background-image: repeating-linear-gradient(45deg, rgba(39,67,214,0.055) 0 1px, transparent 1px 9px); padding: 30px 34px 34px; max-width: 62ch;">
+          <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 28px; line-height: 1.25; color: #101319; text-wrap: pretty;">If you don't own the evaluation, you don't own the experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="framework" class="sec" style="padding: 88px 48px 0;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-bottom: 18px; border-bottom: 1.5px solid #101319; margin-bottom: 40px;">
+      <h2 style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; margin: 0; color: #101319;">The framework</h2>
+    </div>
+
+    <div class="pad-dark" style="background: #0e121c; color: #fdfcf9; padding: 48px 52px 52px;">
+      <div class="g-arc" style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0;">
+        <div style="padding-right: 32px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 14px;">01 · Trust</div>
+          <h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.12; margin: 0 0 14px;">Can the user rely on the agent as a collaborator?</h3>
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+            <div style="font-size: 15px; line-height: 1.55; color: rgba(253,252,249,0.7);"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8fa2f7; display: block; margin-bottom: 4px;">Accuracy</span>Did the agent do the right thing?</div>
+            <div style="font-size: 15px; line-height: 1.55; color: rgba(253,252,249,0.7);"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8fa2f7; display: block; margin-bottom: 4px;">Behavioral alignment</span>Did it behave the way the user expected?</div>
+          </div>
+        </div>
+        <div style="padding: 0 32px; border-left: 1px dashed rgba(255,255,255,0.28);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 14px;">02 · Momentum</div>
+          <h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.12; margin: 0 0 14px;">Is the agent moving the user toward resolution?</h3>
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+            <div style="font-size: 15px; line-height: 1.55; color: rgba(253,252,249,0.7);"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8fa2f7; display: block; margin-bottom: 4px;">Conversational agents</span>Clarify intent, narrow options, guide toward a decision.</div>
+            <div style="font-size: 15px; line-height: 1.55; color: rgba(253,252,249,0.7);"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8fa2f7; display: block; margin-bottom: 4px;">Task agents</span>Execute autonomously, reduce human effort, hand off cleanly with context.</div>
+          </div>
+        </div>
+        <div style="padding-left: 32px; border-left: 1px dashed rgba(255,255,255,0.28);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 14px;">03 · Sentiment</div>
+          <h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.12; margin: 0 0 14px;">How does the user actually feel?</h3>
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+            <div style="font-size: 15px; line-height: 1.55; color: rgba(253,252,249,0.7);"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8fa2f7; display: block; margin-bottom: 4px;">Baseline health</span>Low emotional volatility, a stable or improving trajectory, frustrations that get resolved.</div>
+            <div style="font-size: 15px; line-height: 1.55; color: rgba(253,252,249,0.7);"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8fa2f7; display: block; margin-bottom: 4px;">As a signal</span>Sentiment rarely stands alone — it points at a break in trust or momentum.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="g-stack" style="margin-top: 40px; display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 48px; align-items: start;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8e98; padding-top: 6px;">Accurate ≠ aligned</div>
+      <div>
+        <p style="margin: 0 0 24px; font-size: 17px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">The distinction the framework exists to make visible: both replies below are factually fine. Only one matches what the user already told the agent.</p>
+        <div style="border-top: 1px dashed rgba(16,19,25,0.3);">
+          <div class="g-q" style="display: grid; grid-template-columns: 132px minmax(0,1fr) minmax(0,1fr); gap: 0 28px; padding: 18px 0; border-bottom: 1px dashed rgba(16,19,25,0.22); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8e98;">
+            <div>Category</div><div>User input</div><div>Agent output</div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 132px minmax(0,1fr) minmax(0,1fr); gap: 0 28px; padding: 20px 0; border-bottom: 1px dashed rgba(16,19,25,0.22); align-items: start;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.5; color: #2743d6;">Advanced troubleshooting</div>
+            <div style="font-size: 15.5px; line-height: 1.55; color: #6a6e78;">“I've already tried turning it off and on but it's still not working.”</div>
+            <div style="font-size: 15.5px; line-height: 1.55; color: #101319;">“Before we jump in — did you also make sure it was plugged in, and that you're in the right application?” <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #b4472a; display: block; margin-top: 8px;">Accurate, not aligned</span></div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 132px minmax(0,1fr) minmax(0,1fr); gap: 0 28px; padding: 20px 0; border-bottom: 1px dashed rgba(16,19,25,0.3); align-items: start;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.5; color: #2743d6;">Operations</div>
+            <div style="font-size: 15.5px; line-height: 1.55; color: #6a6e78;">“I can't figure out how to change my settings.”</div>
+            <div style="font-size: 15.5px; line-height: 1.55; color: #101319;">“Happy to help — what specific setting are you trying to change?” <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #2743d6; display: block; margin-top: 8px;">Accurate and aligned</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="implementation" class="sec" style="padding: 88px 48px 0;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-bottom: 18px; border-bottom: 1.5px solid #101319; margin-bottom: 32px;">
+      <h2 style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; margin: 0; color: #101319;">Implementation</h2>
+    </div>
+    <p style="margin: 0 0 36px; font-size: 18px; line-height: 1.55; color: #2a2e37; text-wrap: pretty;">The framework had to work for whoever picked it up — including designers with no data access at all. So I wrote the rollout as a matrix: the same three measures, executed with whatever tools you actually have.</p>
+
+    <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+    <div style="border: 1px dashed rgba(16,19,25,0.35); min-width: 760px;">
+      <div style="display: grid; grid-template-columns: 168px repeat(3, minmax(0,1fr)); gap: 0; border-bottom: 1px dashed rgba(16,19,25,0.28); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8e98;">
+        <div style="padding: 16px 20px;"></div>
+        <div style="padding: 16px 20px; border-left: 1px dashed rgba(16,19,25,0.22);">No access<span style="display: block; margin-top: 6px; font-size: 11px; letter-spacing: 0.06em; text-transform: none; color: #6a6e78;">Figma, Miro, pen &amp; paper</span></div>
+        <div style="padding: 16px 20px; border-left: 1px dashed rgba(16,19,25,0.22);">Limited access<span style="display: block; margin-top: 6px; font-size: 11px; letter-spacing: 0.06em; text-transform: none; color: #6a6e78;">Analytics, customer feedback</span></div>
+        <div style="padding: 16px 20px; border-left: 1px dashed rgba(16,19,25,0.22);">Full access<span style="display: block; margin-top: 6px; font-size: 11px; letter-spacing: 0.06em; text-transform: none; color: #6a6e78;">Agent observability, dev platform</span></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 168px repeat(3, minmax(0,1fr)); gap: 0; border-bottom: 1px dashed rgba(16,19,25,0.28);">
+        <div style="padding: 26px 20px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #2743d6;">Trust</div>
+        <div style="padding: 26px 20px; border-left: 1px dashed rgba(16,19,25,0.22); font-size: 15.5px; line-height: 1.55; color: #2a2e37;">Ground the team in the customer's mental model, then build examples that show the gap between accurate and aligned.</div>
+        <div style="padding: 26px 20px; border-left: 1px dashed rgba(16,19,25,0.22); font-size: 15.5px; line-height: 1.55; color: #2a2e37;">Use sentiment as a proxy: which tools get called when feedback turns negative, where repetition and drop-off cluster.</div>
+        <div style="padding: 26px 20px; border-left: 1px dashed rgba(16,19,25,0.22); font-size: 15.5px; line-height: 1.55; color: #2a2e37;">Train an evaluator on the customer's mental model to surface where the agent breaks it.</div>
+      </div>
+      <div style="display: grid; grid-template-columns: 168px repeat(3, minmax(0,1fr)); gap: 0; border-bottom: 1px dashed rgba(16,19,25,0.28);">
+        <div style="padding: 26px 20px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #2743d6;">Momentum</div>
+        <div style="padding: 26px 20px; border-left: 1px dashed rgba(16,19,25,0.22); font-size: 15.5px; line-height: 1.55; color: #2a2e37;">Map the agentic workflow visually, storyboard what flow feels like, and mark the likely “brick wall” moments.</div>
+        <div style="padding: 26px 20px; border-left: 1px dashed rgba(16,19,25,0.22); font-size: 15.5px; line-height: 1.55; color: #2a2e37;">Find those walls in the data: time on task, drop-off points, time spikes.</div>
+        <div style="padding: 26px 20px; border-left: 1px dashed rgba(16,19,25,0.22); font-size: 15.5px; line-height: 1.55; color: #2a2e37;">Run a thread-level LLM-as-a-judge evaluator that scores forward progress across the whole conversation.</div>
+      </div>
+      <div style="display: grid; grid-template-columns: 168px repeat(3, minmax(0,1fr)); gap: 0;">
+        <div style="padding: 26px 20px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #2743d6;">Sentiment</div>
+        <div style="padding: 26px 20px; border-left: 1px dashed rgba(16,19,25,0.22); font-size: 15.5px; line-height: 1.55; color: #2a2e37;">Agree as a team on what degradation sounds like before you try to measure it.</div>
+        <div style="padding: 26px 20px; border-left: 1px dashed rgba(16,19,25,0.22); font-size: 15.5px; line-height: 1.55; color: #2a2e37;">Track where sentiment degrades and test whether it correlates with a trust or momentum break.</div>
+        <div style="padding: 26px 20px; border-left: 1px dashed rgba(16,19,25,0.22); font-size: 15.5px; line-height: 1.55; color: #2a2e37;">Use it as the tripwire: sentiment flags the thread, trust and momentum evals explain it.</div>
+      </div>
+    </div>
+    </div>
+
+    <div class="g-2" style="margin-top: 40px; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 28px;">
+      <div style="background: #0e121c; color: #fdfcf9; padding: 32px 34px 36px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 18px;">Evaluator prompt — momentum</div>
+        <p style="margin: 0 0 18px; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; line-height: 1.7; color: rgba(253,252,249,0.78); text-wrap: pretty;">Momentum = helpfulness, clarity, and forward progress. The agent should either complete the task or package the next step so any human can continue without friction. Accuracy is a prerequisite; this layer evaluates motion.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-top: 1px dashed rgba(255,255,255,0.28); padding-top: 18px;">
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 10px;">True when</div>
+            <div style="font-size: 14.5px; line-height: 1.6; color: rgba(253,252,249,0.66);">Stays oriented to the goal · gives an actionable next step or finishes the task · packages context for the next actor.</div>
+          </div>
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 10px;">False when</div>
+            <div style="font-size: 14.5px; line-height: 1.6; color: rgba(253,252,249,0.66);">Loops without resolving · loses context or re-asks · leaves the user with no path forward.</div>
+          </div>
+        </div>
+      </div>
+      <!-- TODO: replace placeholder figure with a real artifact image -->
+      <div style="aspect-ratio: auto; border: 1px dashed rgba(39,67,214,0.5); background-image: repeating-linear-gradient(45deg, rgba(39,67,214,0.14) 0 1px, transparent 1px 8px); display: flex; align-items: flex-end; padding: 14px; min-height: 300px;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #2743d6;">fig 1.1 — agentic workflow map</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" class="sec" style="padding: 88px 48px 0;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-bottom: 18px; border-bottom: 1.5px solid #101319; margin-bottom: 44px;">
+      <h2 style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; margin: 0; color: #101319;">What changed</h2>
+    </div>
+
+    <div class="g-3 g-stat-row" style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; border-top: 1px dashed rgba(16,19,25,0.3); border-bottom: 1px dashed rgba(16,19,25,0.3);">
+      <div style="padding: 32px 32px 36px 0;">
+        <div class="d-stat" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 60px; line-height: 1; color: #2743d6; margin-bottom: 12px;">4 → 1</div>
+        <div style="font-size: 16px; line-height: 1.5; color: #2a2e37; max-width: 26ch; text-wrap: pretty;">Weeks from investigating an issue to shipping the code change.</div>
+      </div>
+      <div style="padding: 32px 32px 36px; border-left: 1px dashed rgba(16,19,25,0.22);">
+        <div class="d-stat" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 60px; line-height: 1; color: #2743d6; margin-bottom: 12px;">4 hrs/wk</div>
+        <div style="font-size: 16px; line-height: 1.5; color: #2a2e37; max-width: 26ch; text-wrap: pretty;">Of manual thread reading replaced by automated scoring at scale.</div>
+      </div>
+      <div style="padding: 32px 0 36px 32px; border-left: 1px dashed rgba(16,19,25,0.22);">
+        <div class="d-stat" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 60px; line-height: 1; color: #2743d6; margin-bottom: 12px;">UX</div>
+        <div style="font-size: 16px; line-height: 1.5; color: #2a2e37; max-width: 26ch; text-wrap: pretty;">Now owns the definition of quality — and the behavioral data behind it.</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 56px;">
+      <div style="display: grid; grid-template-columns: minmax(0,1fr) 40px minmax(0,1fr); gap: 0 20px; padding-bottom: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8e98;">
+        <div>Before</div>
+        <div></div>
+        <div>After</div>
+      </div>
+      <div>
+        <div style="display: grid; grid-template-columns: minmax(0,1fr) 40px minmax(0,1fr); gap: 0 20px; align-items: baseline; padding: 18px 0; border-top: 1px dashed rgba(16,19,25,0.3);">
+          <div style="font-size: 16.5px; color: #101319;">Manually flagged threads</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #2743d6;">→</div>
+          <div style="font-size: 16.5px; color: #101319;">Evaluators scoring every thread</div>
+        </div>
+        <div style="display: grid; grid-template-columns: minmax(0,1fr) 40px minmax(0,1fr); gap: 0 20px; align-items: baseline; padding: 18px 0; border-top: 1px dashed rgba(16,19,25,0.22);">
+          <div style="font-size: 16.5px; color: #101319;">An engineer's gut feel</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #2743d6;">→</div>
+          <div style="font-size: 16.5px; color: #101319;">Experience expertise, written down</div>
+        </div>
+        <div style="display: grid; grid-template-columns: minmax(0,1fr) 40px minmax(0,1fr); gap: 0 20px; align-items: baseline; padding: 18px 0; border-top: 1px dashed rgba(16,19,25,0.22);">
+          <div style="font-size: 16.5px; color: #101319;">“Did that change help?” — unknown</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #2743d6;">→</div>
+          <div style="font-size: 16.5px; color: #101319;">Rich behavioral data per release</div>
+        </div>
+        <div style="display: grid; grid-template-columns: minmax(0,1fr) 40px minmax(0,1fr); gap: 0 20px; align-items: baseline; padding: 18px 0; border-top: 1px dashed rgba(16,19,25,0.22); border-bottom: 1px dashed rgba(16,19,25,0.3);">
+          <div style="font-size: 16.5px; color: #101319;">Quality as an engineering concern</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #2743d6;">→</div>
+          <div style="font-size: 16.5px; color: #101319;">Quality as a shared, UX-led practice</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding: 88px 48px 0;">
+    <div class="frame-pad" style="border: 1px dashed rgba(16,19,25,0.35); padding: 44px 48px 48px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 22px;">What I'd carry forward</div>
+      <p style="margin: 0 0 14px; font-size: 24px; line-height: 1.4; color: #101319; text-wrap: pretty;">You don't need access to start. You need agreement on what good looks like.</p>
+      <p style="margin: 0 0 26px; font-size: 18px; line-height: 1.55; color: #2a2e37; text-wrap: pretty;">The hardest part was never the tooling — it was getting a team to say out loud, in examples, what an aligned response is. That artifact is what made the evaluators possible, and it's the part any designer can build tomorrow with a whiteboard.</p>
+      <a class="btn-contact" href="index.html#talks" style="display: inline-flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #101319; border: 1px dashed #2743d6; padding: 11px 16px; transition: background .2s ease, color .2s ease;">This became a UXDX talk →</a>
+    </div>
+  </section>
+
+  <section class="sec" style="padding: 80px 48px 64px;">
+    <div class="g-contact" style="display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 56px; align-items: end;">
+      <h2 class="d-h1" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 1.02; letter-spacing: -0.02em; margin: 0; text-wrap: pretty;">Want the evaluator prompts?</h2>
+      <div style="display: flex; flex-direction: column; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; min-width: 300px;">
+        <a class="lnk" href="mailto:melissa.wittmayer@gmail.com?subject=Eval%20framework%20—%20the%20evaluator%20prompts" style="display: flex; justify-content: space-between; gap: 32px; border-bottom: 1px dashed rgba(16,19,25,0.3); padding: 10px 0;"><span style="color: #8a8e98;">Email</span><span>melissa.wittmayer@gmail.com</span></a>
+        <a class="lnk" href="index.html#work" style="display: flex; justify-content: space-between; gap: 32px; border-bottom: 1px dashed rgba(16,19,25,0.3); padding: 10px 0;"><span style="color: #8a8e98;">All work</span><span>Back to index ↑</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footpad" style="border-top: 1.5px solid #101319; padding: 20px 48px 22px; display: flex; justify-content: space-between; gap: 24px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8e98;">
+    <span>© 2026 Melissa Wittmayer — Case study 01</span>
+  </footer>
+ </div>
+</div>
+
+<script>
+(function () {
+  var root = document.body;
+  if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  function show(el) {
+    el.style.opacity = "1";
+    el.style.transform = "none";
+    setTimeout(function () { el.style.transition = "none"; el.style.opacity = "1"; el.style.transform = "none"; }, 1100);
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -10% 0px", threshold: 0.04 });
+  function scan() {
+    root.querySelectorAll("[data-reveal]").forEach(function (el) {
+      if (el.dataset.revealSeen) return;
+      el.dataset.revealSeen = "1";
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) return;
+      var t = el.style.transition;
+      el.style.transition = "none";
+      el.style.opacity = "0";
+      el.style.transform = "translateY(14px)";
+      void el.offsetHeight;
+      el.style.transition = t;
+      io.observe(el);
+    });
+  }
+  if (document.readyState !== "loading") scan(); else document.addEventListener("DOMContentLoaded", scan);
+  setTimeout(function () { root.querySelectorAll("[data-reveal]").forEach(show); }, 2200);
+})();
+</script>
+</body>
+</html>
