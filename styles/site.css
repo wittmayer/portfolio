@@ -45,6 +45,7 @@ a { color: var(--ink); text-decoration: none; }
   .g-stack { grid-template-columns: 1fr !important; }
   .g-2 { grid-template-columns: 1fr !important; }
   .g-3 { grid-template-columns: 1fr !important; }
+  .g-3 > div { border-left: none !important; }
   .g-meta { grid-template-columns: 1fr 1fr !important; }
   .g-arc { grid-template-columns: 1fr !important; gap: 28px !important; }
   .g-arc > div:first-child { border-left: 1px dashed rgba(255,255,255,0.28) !important; padding-left: 28px !important; }
