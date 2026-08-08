@@ -47,6 +47,7 @@ a { color: var(--ink); text-decoration: none; }
   .g-3 { grid-template-columns: 1fr !important; }
   .g-meta { grid-template-columns: 1fr 1fr !important; }
   .g-arc { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .g-arc > div:first-child { border-left: 1px dashed rgba(255,255,255,0.28) !important; padding-left: 28px !important; }
   .g-q { grid-template-columns: 1fr !important; gap: 6px 0 !important; }
   .g-about { grid-template-columns: 1fr !important; }
   .g-contact { grid-template-columns: 1fr !important; gap: 28px !important; }
@@ -54,8 +55,12 @@ a { color: var(--ink); text-decoration: none; }
   .g-work { grid-template-columns: 1fr !important; gap: 18px !important; }
   .g-work .fig { aspect-ratio: 16 / 9 !important; }
 
-  .g-exp { grid-template-columns: 22px 1fr !important; gap: 2px 16px !important; }
+  .g-exp { grid-template-columns: 22px 1fr !important; gap: 6px 16px !important; }
   .g-exp .exp-date { grid-column: 2 !important; }
+  .g-exp > div:last-child { grid-column: 2 !important; }
+
+  /* stat rows: flush-left, no divider bars when stacked */
+  .g-stat-row > div { border-left: none !important; padding-left: 0 !important; padding-right: 0 !important; }
 
   .pad-dark { padding: 32px 22px 36px !important; }
   .frame-pad { padding: 30px 22px !important; }
