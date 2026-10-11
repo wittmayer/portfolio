@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thinking in Workflows — Case study · Melissa Wittmayer</title>
+  <meta name="description" content="Moving from bespoke products to a catalog of actions — creating a unified agent experience across teams at two companies.">
+  <!-- Shared by link only: keep this page out of search results -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/site.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <style>
+    .list { margin: 0; padding: 0; list-style: none; }
+    .list li { position: relative; padding-left: 20px; margin: 0 0 10px; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty; }
+    .list li::before { content: ""; position: absolute; left: 0; top: 0.68em; width: 5px; height: 5px; background: #2743d6; }
+    .list li:last-child { margin-bottom: 0; }
+    .list-dark li { color: rgba(253,252,249,0.68); font-size: 15px; }
+    .list-dark li::before { background: #8fa2f7; }
+    .fig { display: block; border: 1px dashed rgba(16,19,25,0.32); background: #fff; padding: 16px; }
+    .fig img { display: block; width: 100%; height: auto; }
+    .fig:hover { border-color: #2743d6; }
+    .cmp-head .m-lbl, .cmp .m-lbl { display: none; }
+    @media (max-width: 860px) {
+      .cmp-head { display: none !important; }
+      .cmp { grid-template-columns: 1fr !important; gap: 10px !important; }
+      .cmp .m-lbl { display: block; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8e98; margin-bottom: 4px; }
+      .cmp > div:first-child { color: #2743d6 !important; }
+      .fig { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap" style="min-height: 100vh; overflow-x: hidden; padding: 24px;">
+ <div style="max-width: 1272px; margin: 0 auto; border: 1.5px solid #101319; background: #fdfcf9;">
+
+  <header style="position: sticky; top: 24px; z-index: 50; background: #fdfcf9; border-bottom: 1.5px solid #101319;">
+    <div class="sec" style="padding: 0 48px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+      <a href="/" style="display: flex; align-items: center; gap: 9px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500;">
+        <span style="width: 7px; height: 7px; background: #2743d6; display: inline-block;"></span>Melissa Wittmayer
+      </a>
+      <nav style="display: flex; align-items: center; gap: 26px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.11em; text-transform: uppercase; color: #6a6e78;">
+        <span class="nav-sections" style="display: flex; align-items: center; gap: 26px;">
+          <a class="lnk" href="/#thinking" style="color: inherit;">How I think</a>
+          <a class="lnk" href="/#talks" style="color: inherit;">Talks</a>
+          <a class="lnk" href="/#work" style="color: inherit;">Work Examples</a>
+          <a class="lnk" href="/#about" style="color: inherit;">About</a>
+        </span>
+        <a class="btn-contact" href="/#contact" style="color: #101319; border: 1px dashed #2743d6; padding: 7px 14px; transition: background .2s ease, color .2s ease;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="sec" style="padding: 88px 48px 0;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 14px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #8a8e98; margin-bottom: 32px;">
+      <span style="color: #2743d6;">Case study 03</span>
+      <span>Agentic UX · Two companies</span>
+    </div>
+
+    <div class="frame-pad" style="position: relative; border: 1px dashed rgba(16,19,25,0.35); padding: 48px 52px 52px;">
+      <span style="position: absolute; top: -4px; left: -4px; width: 7px; height: 7px; background: #2743d6;"></span>
+      <span style="position: absolute; top: -4px; right: -4px; width: 7px; height: 7px; background: #2743d6;"></span>
+      <span style="position: absolute; bottom: -4px; left: -4px; width: 7px; height: 7px; background: #2743d6;"></span>
+      <span style="position: absolute; bottom: -4px; right: -4px; width: 7px; height: 7px; background: #2743d6;"></span>
+      <h1 class="d-h1" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 68px; line-height: 1.04; letter-spacing: -0.018em; margin: 0 0 20px; text-wrap: pretty;">Thinking in <em style="font-style: italic; color: #2743d6;">Workflows</em></h1>
+      <p style="margin: 0; font-size: 21px; line-height: 1.45; color: #2a2e37; max-width: 52ch; text-wrap: pretty;">Moving from bespoke products to a catalog of actions.</p>
+    </div>
+
+    <div class="g-meta" style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; margin-top: 40px; border: 1px dashed rgba(16,19,25,0.3);">
+      <div style="padding: 22px 24px 24px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8e98; margin-bottom: 10px;">Role</div>
+        <div style="font-size: 16px; line-height: 1.45; color: #101319;">Design leader at both companies</div>
+      </div>
+      <div style="padding: 22px 24px 24px; border-left: 1px dashed rgba(16,19,25,0.22);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8e98; margin-bottom: 10px;">Responsible for</div>
+        <div style="font-size: 16px; line-height: 1.45; color: #101319;">The vision, and aligning design, product, and engineering around it</div>
+      </div>
+      <div style="padding: 22px 24px 24px; border-left: 1px dashed rgba(16,19,25,0.22);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8e98; margin-bottom: 10px;">Contribution</div>
+        <div style="font-size: 16px; line-height: 1.45; color: #101319;">Action catalog, workflow mapping, agent patterns, team inventory</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="overview" class="sec" style="padding: 96px 48px 0;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-bottom: 18px; border-bottom: 1.5px solid #101319; margin-bottom: 40px;">
+      <h2 style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; margin: 0; color: #101319;">Overview</h2>
+    </div>
+
+    <p style="margin: 0 0 40px; font-size: 21px; line-height: 1.5; color: #101319; max-width: 64ch; text-wrap: pretty;">When every team is racing to ship agents, the experience fragments before anyone notices. I faced that problem at two companies that started from opposite places, and in both the answer centered on a shared catalog of actions.</p>
+
+    <div class="g-3" style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; border: 1px dashed rgba(16,19,25,0.35);">
+      <div data-reveal="1" style="transition: opacity .8s ease, transform .8s ease; padding: 32px 34px 36px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 16px;">The question</div>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">How do you create a unified experience when multiple teams are building agentic solutions their own way?</p>
+      </div>
+      <div data-reveal="2" style="transition: opacity .8s ease .06s, transform .8s ease .06s; padding: 32px 34px 36px; border-left: 1px dashed rgba(16,19,25,0.28);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 16px;">My role</div>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">Design leader at both companies, responsible for the vision and for aligning design, product, and engineering around it.</p>
+      </div>
+      <div data-reveal="3" style="transition: opacity .8s ease .12s, transform .8s ease .12s; padding: 32px 34px 36px; border-left: 1px dashed rgba(16,19,25,0.28); background-image: repeating-linear-gradient(45deg, rgba(39,67,214,0.055) 0 1px, transparent 1px 9px);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 16px;">The outcome</div>
+        <p style="margin: 0 0 14px; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;"><strong style="font-weight: 600; color: #101319;">Company one:</strong> three agents shipped within a year, adding millions in annual recurring revenue, and my team grew from one person to sixteen working under a single vision.</p>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;"><strong style="font-weight: 600; color: #101319;">Company two:</strong> UX stayed ahead of a shifting product strategy, and the team had solid footing while it waited for direction.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding: 88px 48px 0;">
+    <div class="g-stack" style="display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 48px; align-items: start;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #2743d6; padding-top: 12px;">01 — The problem</div>
+      <div>
+        <h3 class="d-h2" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.06; margin: 0 0 18px;">Agent projects are risky in two ways</h3>
+        <p style="margin: 0 0 32px; font-size: 18px; line-height: 1.55; color: #2a2e37; max-width: 62ch; text-wrap: pretty;">And both come from speed.</p>
+        <div class="g-2" style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px;">
+          <div style="border: 1px dashed rgba(16,19,25,0.32); padding: 28px 30px 32px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 16px;">Engineers build ahead of UX</div>
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">New technology moves fast, and teams ship without waiting for design input or for anyone to hold a unified vision.</p>
+          </div>
+          <div style="border: 1px dashed rgba(16,19,25,0.32); padding: 28px 30px 32px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 16px;">Bespoke agents set inconsistent expectations</div>
+            <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">A user who learns how one agent behaves expects the next one to behave the same way. Every custom implementation breaks that expectation.</p>
+          </div>
+        </div>
+        <p style="margin: 32px 0 0; font-size: 24px; line-height: 1.4; color: #101319; max-width: 52ch; text-wrap: pretty;">The cost shows up in trust. If people can't predict how agents work across a product, they won't hand them real work.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding: 80px 48px 0;">
+    <div class="g-stack" style="display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 48px; align-items: start;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #2743d6; padding-top: 12px;">02 — Context</div>
+      <div>
+        <h3 class="d-h2" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.06; margin: 0 0 18px;">Two starting points</h3>
+        <p style="margin: 0 0 32px; font-size: 18px; line-height: 1.55; color: #2a2e37; max-width: 62ch; text-wrap: pretty;">The two companies hit the same problem from different directions.</p>
+
+        <div>
+          <div class="cmp-head" style="display: grid; grid-template-columns: 170px minmax(0,1fr) minmax(0,1fr); gap: 0 28px; padding-bottom: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8e98;">
+            <div></div>
+            <div>Company one</div>
+            <div>Company two</div>
+          </div>
+          <div class="cmp" style="display: grid; grid-template-columns: 170px minmax(0,1fr) minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 18px 0; border-top: 1px dashed rgba(16,19,25,0.3);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6a6e78;">Led by</div>
+            <div style="font-size: 16.5px; line-height: 1.5; color: #101319;"><span class="m-lbl">Company one</span>Engineering and product</div>
+            <div style="font-size: 16.5px; line-height: 1.5; color: #101319;"><span class="m-lbl">Company two</span>Design had room to lead</div>
+          </div>
+          <div class="cmp" style="display: grid; grid-template-columns: 170px minmax(0,1fr) minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 18px 0; border-top: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6a6e78;">Shared infrastructure</div>
+            <div style="font-size: 16.5px; line-height: 1.5; color: #101319;"><span class="m-lbl">Company one</span>A strong API library of agent actions already existed</div>
+            <div style="font-size: 16.5px; line-height: 1.5; color: #101319;"><span class="m-lbl">Company two</span>None; each team built bespoke agents on different infrastructure</div>
+          </div>
+          <div class="cmp" style="display: grid; grid-template-columns: 170px minmax(0,1fr) minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 18px 0; border-top: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6a6e78;">Design's position</div>
+            <div style="font-size: 16.5px; line-height: 1.5; color: #101319;"><span class="m-lbl">Company one</span>Added later, playing catch-up</div>
+            <div style="font-size: 16.5px; line-height: 1.5; color: #101319;"><span class="m-lbl">Company two</span>Early enough to shape the direction</div>
+          </div>
+          <div class="cmp" style="display: grid; grid-template-columns: 170px minmax(0,1fr) minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 18px 0; border-top: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6a6e78;">Main risk</div>
+            <div style="font-size: 16.5px; line-height: 1.5; color: #101319;"><span class="m-lbl">Company one</span>Helping people trust and understand agents that were already being built</div>
+            <div style="font-size: 16.5px; line-height: 1.5; color: #101319;"><span class="m-lbl">Company two</span>Agents behaved differently, so designers couldn't align</div>
+          </div>
+          <div class="cmp" style="display: grid; grid-template-columns: 170px minmax(0,1fr) minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 18px 0; border-top: 1px dashed rgba(16,19,25,0.22); border-bottom: 1px dashed rgba(16,19,25,0.3);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #2743d6;">My move</div>
+            <div style="font-size: 16.5px; line-height: 1.5; color: #101319;"><span class="m-lbl">Company one</span>Create a vision while work was already in progress</div>
+            <div style="font-size: 16.5px; line-height: 1.5; color: #101319;"><span class="m-lbl">Company two</span>Pitch an action catalog to unify engineering and design</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" class="sec" style="padding: 96px 48px 0;">
+    <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 18px; border-bottom: 1.5px solid #101319; margin-bottom: 40px;">
+      <h2 style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; margin: 0; color: #101319;">The approach</h2>
+    </div>
+
+    <div class="g-stack" style="display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 48px; align-items: start;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #2743d6; padding-top: 12px;">03 — The catalog</div>
+      <div>
+        <h3 class="d-h2" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.06; margin: 0 0 18px;">A catalog of actions</h3>
+        <p style="margin: 0 0 16px; font-size: 18px; line-height: 1.55; color: #2a2e37; max-width: 62ch; text-wrap: pretty;">At company two, I pitched an action catalog: an API library of agent actions, like the one company one's engineers had already built. It gave engineers one set of parts to build from and gave designers one shared vocabulary.</p>
+        <p style="margin: 0 0 32px; font-size: 18px; line-height: 1.55; color: #2a2e37; max-width: 62ch; text-wrap: pretty;">Before engineers built any of it, design used the same structure to map workflows with object-oriented UX. We defined the objects first, then composed them into workflows. Every workflow was built from three kinds of parts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding: 8px 48px 0;">
+    <div class="pad-dark" style="background: #0e121c; color: #fdfcf9; padding: 48px 52px 52px;">
+      <div class="g-arc" style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0;">
+        <div style="padding-right: 28px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 14px;">Part 1</div>
+          <h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.15; margin: 0 0 10px;">Triggers</h3>
+          <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.6; color: #fdfcf9;">Start a workflow.</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: rgba(253,252,249,0.6); text-wrap: pretty;">Document created · Document uploaded · Data field changed · Specific date arrives · Set amount of time passes · External event (email, API or MCP event, partner portal)</p>
+        </div>
+        <div style="padding: 0 28px; border-left: 1px dashed rgba(255,255,255,0.28);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 14px;">Part 2</div>
+          <h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.15; margin: 0 0 10px;">Agent actions</h3>
+          <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.6; color: #fdfcf9;">Work the agent does.</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: rgba(253,252,249,0.6); text-wrap: pretty;">Draft document · Extract/abstract · Draft communications · Redline/compare · Classify · Route · Create workflow</p>
+        </div>
+        <div style="padding-left: 28px; border-left: 1px dashed rgba(255,255,255,0.28);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 14px;">Part 3</div>
+          <h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.15; margin: 0 0 10px;">System actions</h3>
+          <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.6; color: #fdfcf9;">Work the system does.</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: rgba(253,252,249,0.6); text-wrap: pretty;">Manual task · Automated task · Wait · Update record · Send communication · Submit to external system · Trigger next workflow</p>
+        </div>
+      </div>
+    </div>
+
+    <figure style="margin: 32px 0 0;">
+      <a class="fig" href="images/components.png" target="_blank" rel="noopener" aria-label="Open the action catalog diagram full size">
+        <img src="images/components.png" width="4872" height="2032" loading="lazy" alt="The action catalog: six triggers, seven agent actions, and seven system actions, each shown as a card grouped by type.">
+      </a>
+      <figcaption style="margin-top: 12px; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #2743d6;">fig 3.1 — Action catalog</figcaption>
+    </figure>
+
+    <div class="g-2" style="margin-top: 32px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px;">
+      <div style="border: 1px dashed rgba(16,19,25,0.32); padding: 28px 30px 32px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 16px;">Manual vs. automated tasks</div>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">Two of these are easy to blur, so we split them on purpose. A <strong style="font-weight: 600; color: #101319;">manual task</strong> waits for a person to say "I've done this." An <strong style="font-weight: 600; color: #101319;">automated task</strong> tells the person what to do, then listens for them to do it and resolves itself. Say a field is missing: the system creates a task asking the person to pick an option, and the task closes when they choose one and save.</p>
+      </div>
+      <div style="border: 1px dashed rgba(39,67,214,0.5); background-image: repeating-linear-gradient(45deg, rgba(39,67,214,0.055) 0 1px, transparent 1px 9px); padding: 28px 30px 32px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 16px;">Keeping people in control</div>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #2a2e37; text-wrap: pretty;">The <strong style="font-weight: 600; color: #101319;">create workflow</strong> agent action is a good example. Based on a document it received, the agent drafts a new workflow and asks, "Does this look right? Do you want it to run?" The person stays in control while the agent does the setup.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding: 88px 48px 0;">
+    <div class="g-stack" style="display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 48px; align-items: start;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #2743d6; padding-top: 12px;">04 — Mapping</div>
+      <div>
+        <h3 class="d-h2" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.06; margin: 0 0 18px;">Mapping real workflows</h3>
+        <p style="margin: 0 0 32px; font-size: 18px; line-height: 1.55; color: #2a2e37; max-width: 62ch; text-wrap: pretty;">Every team was already building something. So I didn't start by asking which components they needed. I asked what they were working on, and we mapped it with the catalog. Each map raised design questions:</p>
+        <div style="border-top: 1px dashed rgba(16,19,25,0.3);">
+          <div class="g-q" style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 16px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">1</div>
+            <div style="font-size: 17px; line-height: 1.5;">How does user context get into the trigger, and how does the user see what was included?</div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 16px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">2</div>
+            <div style="font-size: 17px; line-height: 1.5;">How do they find out a task was created for them?</div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 16px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">3</div>
+            <div style="font-size: 17px; line-height: 1.5;">Is there enough context in the task for them to know what to do next?</div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 16px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">4</div>
+            <div style="font-size: 17px; line-height: 1.5;">How does the user know progress is being made, especially on a large document?</div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 16px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">5</div>
+            <div style="font-size: 17px; line-height: 1.5;">How do we show citations and thinking?</div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 16px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">6</div>
+            <div style="font-size: 17px; line-height: 1.5;">What context does someone need to review the agent's work, and how do we give it to them at the right time instead of all at once? Progressive disclosure is the starting point.</div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 16px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">7</div>
+            <div style="font-size: 17px; line-height: 1.5;">Does the task ask the user to approve the update first, or to confirm it afterward?</div>
+          </div>
+        </div>
+        <p style="margin: 28px 0 0; font-size: 18px; line-height: 1.55; color: #2a2e37; max-width: 62ch; text-wrap: pretty;">Either way, auditing and context become the central questions.</p>
+      </div>
+    </div>
+
+    <figure style="margin: 40px 0 0;">
+      <a class="fig" href="images/workflows.png" target="_blank" rel="noopener" aria-label="Open the workflow maps full size">
+        <img src="images/workflows.png" width="4212" height="3340" loading="lazy" alt="Three workflows mapped from the catalog — creating a task from an external event, creating a task from an uploaded document, and updating data from an uploaded document — each annotated with the design questions it raised.">
+      </a>
+      <figcaption style="margin-top: 12px; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #2743d6;">fig 3.2 — Workflows mapped from the catalog</figcaption>
+    </figure>
+  </section>
+
+  <section id="patterns" class="sec" style="padding: 96px 48px 0;">
+    <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 18px; border-bottom: 1.5px solid #101319; margin-bottom: 40px;">
+      <h2 style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; margin: 0; color: #101319;">Three patterns every agent needs</h2>
+    </div>
+    <p style="margin: 0 0 40px; font-size: 18px; line-height: 1.55; color: #2a2e37; max-width: 62ch; text-wrap: pretty;">The workflows looked different, but the questions they raised fell into three buckets. These became the patterns every agent had to follow.</p>
+
+    <div class="pad-dark" style="background: #0e121c; color: #fdfcf9; padding: 48px 52px 52px;">
+      <div class="g-arc" style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0;">
+        <div style="padding-right: 28px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 14px;">Delegating</div>
+          <h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.15; margin: 0 0 18px;">How a user hands work to the agent</h3>
+          <ul class="list list-dark">
+            <li>Traditional UI (buttons), natural language, or work that arrives automatically</li>
+            <li>Onboarding and settings, and how delegation changes as customers grow more comfortable and trust the system more</li>
+          </ul>
+        </div>
+        <div style="padding: 0 28px; border-left: 1px dashed rgba(255,255,255,0.28);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 14px;">Auditing</div>
+          <h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.15; margin: 0 0 18px;">How a user checks what the agent did</h3>
+          <ul class="list list-dark">
+            <li>Audit logs, history logs, and version history that show how things changed</li>
+            <li>Thinking process that's shown in the moment or as a proposed plan of action</li>
+            <li>Citing: sources pulled from specific documents, and also the agent's own memory ("I'm using this because you told me last time"). The citation appears right where the user is looking, and they can go deeper if they want to.</li>
+          </ul>
+        </div>
+        <div style="padding-left: 28px; border-left: 1px dashed rgba(255,255,255,0.28);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8fa2f7; margin-bottom: 14px;">Handoff</div>
+          <h3 style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.15; margin: 0 0 18px;">How work moves from the agent to a person</h3>
+          <ul class="list list-dark">
+            <li>Navigation that uses progressive disclosure: enough information to act, plus ways for newer or more cautious users to dig deeper without leaving the flow</li>
+            <li>Notifications that are purposeful and meet people where they are, because notification fatigue is real</li>
+            <li>Status: how much is done, who is handling it, whether it has a due date, and how urgent it is</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <figure style="margin: 32px 0 0;">
+      <a class="fig" href="images/design-patterns.png" target="_blank" rel="noopener" aria-label="Open the agent patterns diagram full size">
+        <img src="images/design-patterns.png" width="5926" height="1348" loading="lazy" alt="Three pattern groups — delegating (buttons, natural language, automated), auditing (auditing, thinking, citing), and handoff (navigation, notifications, status).">
+      </a>
+      <figcaption style="margin-top: 12px; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #2743d6;">fig 3.3 — Delegating, auditing and handoff</figcaption>
+    </figure>
+  </section>
+
+  <section class="sec" style="padding: 88px 48px 0;">
+    <div class="g-stack" style="display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 48px; align-items: start;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #2743d6; padding-top: 12px;">05 — The plan</div>
+      <div>
+        <h3 class="d-h2" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.06; margin: 0 0 18px;">From patterns to plan</h3>
+        <p style="margin: 0 0 32px; font-size: 18px; line-height: 1.55; color: #2a2e37; max-width: 62ch; text-wrap: pretty;">With the catalog and patterns in place, the rest was an inventory. For each team, we answered five questions:</p>
+        <div style="border-top: 1px dashed rgba(16,19,25,0.3);">
+          <div class="g-q" style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 16px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">1</div>
+            <div style="font-size: 17px; line-height: 1.5;">What are you working on?</div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 16px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">2</div>
+            <div style="font-size: 17px; line-height: 1.5;">Which components already in the design system can you reuse?</div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 16px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">3</div>
+            <div style="font-size: 17px; line-height: 1.5;">Where are we missing something?</div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 16px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">4</div>
+            <div style="font-size: 17px; line-height: 1.5;">Where do we need to explore?</div>
+          </div>
+          <div class="g-q" style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 0 28px; align-items: baseline; padding: 16px 0; border-bottom: 1px dashed rgba(16,19,25,0.22);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #b0b0ae;">5</div>
+            <div style="font-size: 17px; line-height: 1.5;">Who owns which part of the experience?</div>
+          </div>
+        </div>
+        <p style="margin: 32px 0 16px; font-size: 18px; line-height: 1.55; color: #2a2e37; max-width: 62ch; text-wrap: pretty;">Research worked the same way. Teams were already building and testing, so we didn't start with a long study of which components we needed. We asked each team what they were noticing as they implemented, and led the research alongside the work.</p>
+        <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #2a2e37; max-width: 62ch; text-wrap: pretty;">At company two, the biggest barrier the team named was a lack of visibility into what other teams had already built. The inventory was built to address that.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" class="sec" style="padding: 96px 48px 0;">
+    <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 18px; border-bottom: 1.5px solid #101319; margin-bottom: 44px;">
+      <h2 style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 19px; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; margin: 0; color: #101319;">Impact</h2>
+    </div>
+
+    <div class="g-3 g-stat-row" style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; border-top: 1px dashed rgba(16,19,25,0.3); border-bottom: 1px dashed rgba(16,19,25,0.3);">
+      <div style="padding: 32px 32px 36px 0;">
+        <div class="d-stat" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 64px; line-height: 1; color: #2743d6; margin-bottom: 12px;">3</div>
+        <div style="font-size: 16px; line-height: 1.5; color: #2a2e37; max-width: 26ch; text-wrap: pretty;">Agents released within a year at company one, adding millions in annual recurring revenue.</div>
+      </div>
+      <div style="padding: 32px 32px 36px; border-left: 1px dashed rgba(16,19,25,0.22);">
+        <div class="d-stat" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 64px; line-height: 1; color: #2743d6; margin-bottom: 12px;">1 → 16</div>
+        <div style="font-size: 16px; line-height: 1.5; color: #2a2e37; max-width: 26ch; text-wrap: pretty;">A team of one became a team of sixteen, all led by the vision set at the start.</div>
+      </div>
+      <div style="padding: 32px 0 36px 32px; border-left: 1px dashed rgba(16,19,25,0.22);">
+        <div class="d-stat" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 64px; line-height: 1; color: #2743d6; margin-bottom: 12px;">Ahead</div>
+        <div style="font-size: 16px; line-height: 1.5; color: #2a2e37; max-width: 26ch; text-wrap: pretty;">UX at company two stayed ahead through several different product strategies.</div>
+      </div>
+    </div>
+
+    <div class="g-2" style="margin-top: 40px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px;">
+      <div style="border: 1px dashed rgba(16,19,25,0.32); padding: 28px 30px 32px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 16px;">Company one</div>
+        <ul class="list">
+          <li>Three agents released within a year, adding millions in annual recurring revenue.</li>
+          <li>A team of one became a team of sixteen. I started alone, working out how to wrap a vision around the work. By launch I was delegating ownership across sixteen people, some direct reports and some from teams across the org, all led by the vision I set at the start.</li>
+        </ul>
+      </div>
+      <div style="border: 1px dashed rgba(16,19,25,0.32); padding: 28px 30px 32px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 16px;">Company two</div>
+        <ul class="list">
+          <li>UX wasn't behind, even as the company went through a lot of change, including several different product strategies.</li>
+          <li>While the team waited for the newest strategy, the catalog and patterns gave it grounding. People had footing to keep making progress.</li>
+          <li>That steadiness lifted team morale, which is a retention outcome as much as a cultural one.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding: 88px 48px 0;">
+    <div class="frame-pad" style="border: 1px dashed rgba(16,19,25,0.35); padding: 44px 48px 48px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #2743d6; margin-bottom: 22px;">What I carry forward</div>
+      <p style="margin: 0 0 14px; font-size: 24px; line-height: 1.4; color: #101319; text-wrap: pretty;">Arriving late means building the vision around work that is already moving. Arriving early means shaping the foundation. In both cases the move is the same: make the shared parts visible, so teams stop duplicating work and users stop meeting a different agent every time.</p>
+      <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #2a2e37; text-wrap: pretty;">It also speaks to how I lead. When a company can't give people firm ground to stand on, I can lead through fully ambiguous situations and give them something to anchor their work to.</p>
+    </div>
+  </section>
+
+  <section class="sec" style="padding: 72px 48px 64px;">
+    <div class="g-contact" style="display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 56px; align-items: end;">
+      <h2 class="d-h1" style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 52px; line-height: 1.02; letter-spacing: -0.02em; margin: 0; text-wrap: pretty;">Want to talk through the details?</h2>
+      <div style="display: flex; flex-direction: column; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; min-width: 300px;">
+        <a class="lnk" href="mailto:melissa.wittmayer@gmail.com?subject=Thinking%20in%20Workflows" style="display: flex; justify-content: space-between; gap: 32px; border-bottom: 1px dashed rgba(16,19,25,0.3); padding: 10px 0;"><span style="color: #8a8e98;">Email</span><span>melissa.wittmayer@gmail.com</span></a>
+        <a class="lnk" href="/#work" style="display: flex; justify-content: space-between; gap: 32px; border-bottom: 1px dashed rgba(16,19,25,0.3); padding: 10px 0;"><span style="color: #8a8e98;">All work</span><span>Back to index ↑</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footpad" style="border-top: 1.5px solid #101319; padding: 20px 48px 22px; display: flex; justify-content: space-between; gap: 24px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8e98;">
+    <span>© 2026 Melissa Wittmayer — Case study 03</span>
+  </footer>
+ </div>
+</div>
+
+<script>
+(function () {
+  var root = document.body;
+  if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  function show(el) {
+    el.style.opacity = "1";
+    el.style.transform = "none";
+    setTimeout(function () { el.style.transition = "none"; el.style.opacity = "1"; el.style.transform = "none"; }, 1100);
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -10% 0px", threshold: 0.04 });
+  function scan() {
+    root.querySelectorAll("[data-reveal]").forEach(function (el) {
+      if (el.dataset.revealSeen) return;
+      el.dataset.revealSeen = "1";
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) return;
+      var t = el.style.transition;
+      el.style.transition = "none";
+      el.style.opacity = "0";
+      el.style.transform = "translateY(14px)";
+      void el.offsetHeight;
+      el.style.transition = t;
+      io.observe(el);
+    });
+  }
+  if (document.readyState !== "loading") scan(); else document.addEventListener("DOMContentLoaded", scan);
+  setTimeout(function () { root.querySelectorAll("[data-reveal]").forEach(show); }, 2200);
+})();
+</script>
+</body>
+</html>
